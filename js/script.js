@@ -66,3 +66,21 @@ smoothScrollToPage();
 function form() {
 
 }
+
+
+// function smoothScrollToPage() {
+//     const links = document.querySelectorAll('a[href*="#"]');
+
+//     for (let oneLink of links) {
+//         const link_href = oneLink.getAttribute('href');
+
+//         oneLink.addEventListener('click', e => {
+//             e.preventDefault();
+//             document.querySelector(link_href).scrollIntoView({
+//                 block: "start", 
+//                 behavior: "smooth"
+//             });
+//         });
+//     }
+// } 
+// smoothScrollToPage();
