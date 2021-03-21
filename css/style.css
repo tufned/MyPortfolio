@@ -6,10 +6,6 @@
 
     /* scroll-behavior: smooth; */
 }
-body {
-    background-color: #e7e6e2;
-    /* background-color: #090909; */
-}
 li {
     list-style: none;
 }
@@ -22,21 +18,30 @@ button, input, textarea {
 }
 
 
+.bg {
+    background-color: #070707;
+    transition: all 1s ease;
+    transition-delay: 0.1s;
+}
+
 /* ---------------header----------------- */
 
 
-#home {
+.home {
     min-height: 500px;
     height: 100vh;
     padding: 0 4%;
     overflow: hidden;
-
+    transition: all 1s ease;
+    transition-delay: 0.1s;
     
-    background: #090909;  
-    background: -webkit-linear-gradient(to bottom, #111111, #090909); 
-    background: linear-gradient(to bottom, #111111, #090909); 
-
-    /* background: #e7e6e2; */
+    /* background: #070707;   */
+    /* background: -webkit-linear-gradient(to bottom, #141414, #070707); 
+    background: linear-gradient(to bottom, #141414, #070707);  */
+}
+.white-bg, .home-white {
+    transition: all .6s ease;
+    background-color: #E2E1DF;
 }
 
 
@@ -268,6 +273,7 @@ button, input, textarea {
     background: linear-gradient(to right, #4692C8, #EEFFBE); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 1s ease;
 
     /* background: #FF4E50;
     background: -webkit-linear-gradient(to left, #F9D423, #FF4E50);
@@ -285,6 +291,7 @@ button, input, textarea {
     background: linear-gradient(to right, #4692C8, #EEFFBE); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 1s ease;
 
     /* background: #FF4E50;
     background: -webkit-linear-gradient(to left, #F9D423, #FF4E50);
@@ -293,11 +300,16 @@ button, input, textarea {
     -webkit-text-fill-color: transparent; */
 }
 
+.greetings-dark {
+    background: #828282;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 1s ease;
+}
 
 
 
-
-.button-about_me {
+.home-button {
     margin-top: 19px;
     height: 75px;
     width: 255px;
@@ -307,11 +319,16 @@ button, input, textarea {
     color: #5C9BC1;
     /* color: #FF634D; */
     transition: all 0.3s ease;
-
+    
     border: 3px solid #5C9BC1;
     /* border: 3px solid #FF634D; */
 }
-.button-about_me:hover {
+.home-button_dark {
+    color: #828282;
+    border: 3px solid #828282;
+}
+
+.home-button:hover {
     background-color: #5C9BC1;
     /* background-color: #FF634D; */
     color: white;
@@ -320,11 +337,11 @@ button, input, textarea {
     /* border: 8px solid #FF634D; */
     font-size: 39px;
 }
-.button-about_me:active {
+.home-button:active {
     transition: all .1s ease;
     background-color: #365D74;
     /* background-color: #A74133; */
-    color: #e7e6e2;
+    color: #E2E1DF;
     border: 8px solid #365D74;
     /* border: 8px solid #A74133; */
 }
@@ -336,20 +353,23 @@ button, input, textarea {
 
 /* ---------------about-me-page----------------- */
 .about-me-page {
-    padding: 3% 6% 0 6%;
+    padding: 3% 6% 140px 6%;
     height: 540px;
+    margin-top: 50px;
+    overflow: hidden;
 }
 .about-me-page p  {
-    color: #151514;
+    /* color: #151514; */
     text-align: start;
 }
 
 
 
-.description h1 {
+.about-me_h1-title {
     font-size: 75px;
-    color: #ED4A4D;
+    color: #b9b9b9;
     margin: 0 0 10% 5%;
+    transition: all 0.6s ease;
 }
 
 .about-me-main {
@@ -370,17 +390,20 @@ button, input, textarea {
     max-width: 1000px;
     background-color: inherit;
     padding: 10px 0 20px 0;
-    transition: all .7s ease;
-    border-radius: 30px;
+    transition: all .5s ease;
+    transition-delay: 0s;
+    border-radius: 25px;
+    transform: translateX(15%);
 }
-.chart:hover {
-    box-shadow: -15px 30px 50px 0 rgb(38 38 38 / 10%);
+.chart_active {
+    transition-delay: .2s;
+    box-shadow: -20px 40px 60px 0px rgb(38 38 38 / 20%);
     background-color: #E9E9E6;
     border-radius: 50px;
-    border-left: 1px solid inherit;
     cursor: default;
-    transform: scale3d(1.01, 1.01, 1.01)
+    transform: scale3d(1.02, 1.02, 1.02);
 }
+
 
 .what-can-i-do {
     width: 84%;
@@ -388,13 +411,15 @@ button, input, textarea {
     margin: 0 auto;
     padding: 0;
 }
-.what-can-i-do .row {
+
+.chart-row {
     margin: 20px 0;
-    background-color: #DD9238;
+    background: #b9b9b9;
     padding: 13px 16px;
     border-radius: 50px;
     transition: all 0.2s ease;
     height: 25px;
+    transition: all 0.4s ease-in;
 }
 
 
@@ -406,7 +431,8 @@ button, input, textarea {
 
 
 .what-can-i-do p {
-    color: #966326;
+    color: #b9b9b9;
+    transition: all 0.4s ease-out;
 }
 
 
@@ -414,8 +440,9 @@ button, input, textarea {
 
 .chart-title {
     margin: 25px 0 35px 20px;
-    color: #DD9238;
+    color: #b9b9b9;
     font-size: 45px;
+    transition: all 0.5s ease-in;
 }
 
 .what-can-i-do .write-code {
@@ -462,7 +489,8 @@ button, input, textarea {
 /* ---------------photo-block----------------- */
 
 .photo-block {
-    height: 640px;
+    height: 400px;
+    padding: 40px 0 120px 0;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -615,6 +643,7 @@ button, input, textarea {
     height: 1420px;
     background: #111111;  
     position: relative;
+    /* padding-bottom: 5%; */
 }
 
 .projects-page::before {
@@ -625,7 +654,7 @@ button, input, textarea {
     background-color: #111111;
     height: 100px;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
     box-shadow: 0 0 60px 0 rgb(17 17 17 / 50%);
 }
 .projects-page::after {
@@ -639,7 +668,7 @@ button, input, textarea {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     box-shadow: 0 0 60px 0 rgb(17 17 17 / 50%);
 }
 
@@ -650,6 +679,7 @@ button, input, textarea {
     width: 100%;
     position: absolute;
     top: 1%;
+    z-index: 4;
 }
 .title-projects h1 {
     font-size: 85px;
@@ -668,6 +698,8 @@ button, input, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 4;
 }
 
 
@@ -749,6 +781,7 @@ button, input, textarea {
     background-color: #9CB089;
     transition: all 0.3s ease;
     box-shadow: 0 0 50px 0 rgb(166 187 144 / 80%);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 .border:hover .project-foto {
     box-shadow: 0px 0px 20px -10px #0E0E0E;
@@ -865,7 +898,7 @@ button, input, textarea {
     width: 250px;
     border-radius: 12px;
     color: #828282;
-    background-color: #e7e6e2;
+    background-color: #E2E1DF;
     font-size: 30px;
     transition: all .5s ease;
 }
@@ -950,16 +983,16 @@ button, input, textarea {
     background-color: #dddbd5;
     box-shadow: 0 0 100px 0 rgb(21 21 20 / 10%);
     height: 115vh;
-    /* margin: 200px 0 0 0; */
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 .final-page-shell {
-    height: 100vh;
+    height: inherit;
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
 }
 
 .final-bg {
@@ -971,14 +1004,14 @@ button, input, textarea {
 
 .final-main {
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ball {
+.ball, .ball_active {
     border-radius: 400px;
     height: 500px;
     width: 500px;
@@ -994,27 +1027,26 @@ button, input, textarea {
     color: #5C9BC1;
     font-size: 80px;
     text-align: center;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
 }
 
 /* =========DOM========= */
 .ball_active {
-    height: 200%;
-    width: 200%;
+    height: 300%;
+    width: 300%;
+    border-radius: 800px;
 }
 .ball-text_active {
-    opacity: 0;
+    font-size: 0;
 }
 
 /* =========/DOM========= */
 
 
 .ball:hover {
-    transform: scale3d(1.1, 1.1, 1.1);
+    height: 580px;
+    width: 580px;
     cursor: default;
-}
-.ball:hover .ball-text {
-    transform: scale3d(0.895, 0.895, 0.895);
 }
 /* ---------------/final-page----------------- */
 
@@ -1028,28 +1060,37 @@ button, input, textarea {
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    display: none;
+    z-index: -2;
 }
 .contact-page_active {
-    display: block;
+    z-index: 2;
 }
 
 
 .contact-info {
     width: 450px;
     height: 600px;
-    background-color: #fff;
+    background-color: #0E0E0E;
     border-radius: 35px;
     opacity: 0;
-    transform: translateX(-150%);
-    transition: all 0.2s ease;
-    transition-delay: 1s;
+    transform: translateX(-350%);
 }
 .contact-info_active {
+    animation-name: contact-info_active;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
     opacity: 1;
-    transform: translateX(0);
+    animation-fill-mode: forwards;
 }
-
+@keyframes contact-info_active {
+    40% {
+        transform: translateX(8%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .contact-border {
     height: 95%;
@@ -1057,14 +1098,26 @@ button, input, textarea {
     width: 750px;
     border-radius: 80px;
     opacity: 0;
-    transform: translateX(150%);
-    transition: all 0.2s ease;
-    transition-delay: 1s;
+    transform: translateX(350%);
 }
 .contact-border_active {
+    animation-name: contact-border_active;
+    animation-duration: 1s;
+    animation-delay: 1s;
     opacity: 1;
-    transform: translateX(0);
+    animation-fill-mode: forwards;
 }
+@keyframes contact-border_active {
+    40% {
+        transform: translateX(-8%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
 
 .contact-header, .contact-main, .contact-footer{
@@ -1097,8 +1150,7 @@ button, input, textarea {
 .input-shell {
     margin: 0 0 8% 0;
 }
-.contact-input {
-    /* background-color:#e7e6e2; */
+.input, .input_active {
     width: 550px;
     height: 50px;
     border-radius: 25px;
@@ -1113,7 +1165,7 @@ button, input, textarea {
 }
 
 
-.contact-textarea {
+.textarea {
     width: 550px;
     height: 200px;
     resize: none;
@@ -1126,10 +1178,13 @@ button, input, textarea {
 }
 
 
-.contact-textarea:hover, .contact-input:hover {
+.textarea:hover, .input:hover {
     border: 3px solid #B1B1B1;
 }
-.contact-textarea:focus, .contact-input:focus {
+.entrance_active:hover {
+    border: 3px solid #fff;
+}
+.textarea:focus, .input:focus, .entrance_active {
     box-shadow: 0 25px 30px 0 rgb(0 0 0 / 40%);
     background-color: #fff;
     border: 3px solid #fff;
@@ -1148,7 +1203,7 @@ button, input, textarea {
 .textarea-shell:hover .input-name, .input-shell:hover .input-name {
     color: #B1B1B1;
 }
-.textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name {
+.textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
     transform: translateY(-43px);
     font-size: 16px;
     color: inherit;
@@ -1252,25 +1307,25 @@ button, input, textarea {
         font-size: 87px;
         letter-spacing: 0px;
     }
-    .button-about_me {
+    .home-button {
         height: 80px;
         width: 265px;
         font-size: 42px;
         border: 3px solid #5C9BC1;
         line-height: 20px;
     }
-    .button-about_me:hover {
+    .home-button:hover {
         border: 7px solid #5C9BC1;
         font-size: 40px;
         line-height: 20px;
     }
-    .button-about_me:active {
+    .home-button:active {
         border: 7px solid #365D74;
     }
 
 
     .about-me-page {
-        padding: 4% 8% 0 8%;
+        padding: 4% 8% 140px 8%;
     }
 
     .skill {
@@ -1373,12 +1428,12 @@ button, input, textarea {
 
 
 
-    .button-about_me {
+    .home-button {
         height: 70px;
         width: 230px;
         font-size: 33px;
     }
-    .button-about_me:hover {
+    .home-button:hover {
         font-size: 32px;
     }
     /* ===========/first-page=========== */
