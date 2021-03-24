@@ -17,11 +17,16 @@ button, input, textarea {
     border: none;
 }
 
-
+.page {
+    position: relative;
+    z-index: 0;
+}
 .bg {
     background-color: #070707;
     transition: all 1s ease;
     transition-delay: 0.1s;
+    position: relative; 
+    z-index: -1;
 }
 
 /* ---------------header----------------- */
@@ -31,9 +36,9 @@ button, input, textarea {
     min-height: 500px;
     height: 100vh;
     padding: 0 4%;
-    overflow: hidden;
     transition: all 1s ease;
     transition-delay: 0.1s;
+    /* overflow: hidden; */
     
     /* background: #070707;   */
     /* background: -webkit-linear-gradient(to bottom, #141414, #070707); 
@@ -208,11 +213,31 @@ button, input, textarea {
 }
 
 .scroll-shell {
-    transform: rotate(90deg);
+    transform: rotate(90deg) translateX(100%);
+    opacity: 0;
     margin-bottom: 40px;
     position: relative;
     right: 20px;
+    transition: all .4s ease;
 }
+.scroll-shell_active {
+    transform: rotate(90deg) translateX(0);
+    transition: all .4s ease-out;
+    opacity: 1;
+}
+
+/* .scroll-shell_animation {
+    animation-name: scroll-shell_animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transition: all .5s ease-out;
+}
+@keyframes scroll-shell_animation {
+    to {
+        transform: rotate(90deg) translateX(0);
+    }
+} */
 
 .scroll {
     font-size: 12px;
@@ -274,12 +299,6 @@ button, input, textarea {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 1s ease;
-
-    /* background: #FF4E50;
-    background: -webkit-linear-gradient(to left, #F9D423, #FF4E50);
-    background: linear-gradient(to left, #F9D423, #FF4E50); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 .who-am-i {
     font-size: 80px;
@@ -292,12 +311,6 @@ button, input, textarea {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 1s ease;
-
-    /* background: #FF4E50;
-    background: -webkit-linear-gradient(to left, #F9D423, #FF4E50);
-    background: linear-gradient(to left, #F9D423, #FF4E50); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 .greetings-dark {
@@ -317,11 +330,8 @@ button, input, textarea {
     font-size: 40px;
     background-color: inherit;
     color: #5C9BC1;
-    /* color: #FF634D; */
     transition: all 0.3s ease;
-    
     border: 3px solid #5C9BC1;
-    /* border: 3px solid #FF634D; */
 }
 .home-button_dark {
     color: #828282;
@@ -330,25 +340,66 @@ button, input, textarea {
 
 .home-button:hover {
     background-color: #5C9BC1;
-    /* background-color: #FF634D; */
     color: white;
     cursor: pointer;
     border: 8px solid #5C9BC1;
-    /* border: 8px solid #FF634D; */
     font-size: 39px;
 }
 .home-button:active {
     transition: all .1s ease;
     background-color: #365D74;
-    /* background-color: #A74133; */
     color: #E2E1DF;
     border: 8px solid #365D74;
-    /* border: 8px solid #A74133; */
 }
 
 
 /* ---------------/main----------------- */
 
+.up {
+    background-color: #E9E9E6;
+    height: 55px;
+    width: 40px;
+    max-width: 45px;
+    border-radius: 50px;
+    position: fixed;
+    left: 40px;
+    bottom: 30px;
+    z-index: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    box-shadow: 0 10px 30px 0 rgb(0 0 0 / 30%);
+    transform: translateY(300%);
+}
+.up_active {
+    transform: translateY(0);
+}
+
+.arrow {
+    height: 20px;
+    width: 4px;
+    border-radius: 50px;
+    background-color: #4DA3E0;
+    position: absolute;
+    transition: all .2s ease-out;
+}
+.left-arrow {
+    transform: rotate(40deg);
+    left: 12.5px;
+}
+.right-arrow {
+    transform: rotate(-40deg);
+    right: 12.5px;
+}
+
+
+.up:hover .left-arrow{
+    transform: translateY(-6px) rotate(40deg);
+}
+.up:hover .right-arrow{
+    transform: translateY(-6px) rotate(-40deg);
+}
 
 
 /* ---------------about-me-page----------------- */
@@ -390,10 +441,10 @@ button, input, textarea {
     max-width: 1000px;
     background-color: inherit;
     padding: 10px 0 20px 0;
-    transition: all .5s ease;
+    transition: all .4s ease;
     transition-delay: 0s;
     border-radius: 25px;
-    transform: translateX(15%);
+    transform: translateX(15%) scale3d(0.995, 0.995, 0.995);
 }
 .chart_active {
     transition-delay: .2s;
@@ -489,7 +540,7 @@ button, input, textarea {
 /* ---------------photo-block----------------- */
 
 .photo-block {
-    height: 400px;
+    height: 450px;
     padding: 40px 0 120px 0;
     width: 100%;
     overflow: hidden;
@@ -498,24 +549,27 @@ button, input, textarea {
 }
 
 .photo-block-main-shell {
-    height: 400px;
+    height: inherit;
     width: 100%;
 }
 .photo-block-main {
+    position: relative;
+    left: 450px;
     height: inherit;
-    width: 300%;
+    width: 3500px;
     /* background-color: #dddbd5; */
     display: flex;
     align-items: center;
     z-index: 2;
+    transition: all .15s ease;
 }
 
 .photo {
     margin-right: 0.3%;
     height: inherit;
-    width: 600px;
-    border-radius: 35px;
-    box-shadow: -15px 0px 30px 0 rgb(38 38 38 / 10%);
+    width: 650px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px 0 rgb(38 38 38 / 15%);
     background-color: #B1B1B1;
 }
 
@@ -980,13 +1034,12 @@ button, input, textarea {
 
 /* ---------------final-page----------------- */
 .final-page {
-    background-color: #dddbd5;
-    box-shadow: 0 0 100px 0 rgb(21 21 20 / 10%);
-    height: 115vh;
+    height: 120vh;
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
+    /* z-index: 10; */
 }
 .final-page-shell {
     height: inherit;
@@ -996,10 +1049,15 @@ button, input, textarea {
 }
 
 .final-bg {
-    height: 100%;
+    height: 120vh;
     width: 100%;
     background-color: #5C9BC1;
+    box-shadow: 0 0 100px 0 rgb(21 21 20 / 30%);
     position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 0.8s ease;
 }
 
 .final-main {
@@ -1011,39 +1069,48 @@ button, input, textarea {
     align-items: center;
 }
 
-.ball, .ball_active {
+.ball {
     border-radius: 400px;
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
+    transform: translateY(100px);
+
     background-color:#1C1C1C;
-    box-shadow: 0 0 80px 0 rgb(21 21 20 / 50%);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
 }
+.for-ball {
+    height: 500px;
+    width: 500px;
+    transform: translateY(0);
+    box-shadow: 0 0 80px 0 rgb(21 21 20 / 50%);
+}
 
 .ball-text {
     color: #5C9BC1;
+    color: #E2E1DF;
     font-size: 80px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 /* =========DOM========= */
 .ball_active {
     height: 300%;
     width: 300%;
-    border-radius: 800px;
+    border-radius: 100px;
 }
 .ball-text_active {
     font-size: 0;
 }
 
+
 /* =========/DOM========= */
 
 
-.ball:hover {
+.ball-hover:hover {
     height: 580px;
     width: 580px;
     cursor: default;
@@ -1078,7 +1145,7 @@ button, input, textarea {
 .contact-info_active {
     animation-name: contact-info_active;
     animation-duration: 1s;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     opacity: 1;
     animation-fill-mode: forwards;
 }
@@ -1103,7 +1170,7 @@ button, input, textarea {
 .contact-border_active {
     animation-name: contact-border_active;
     animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: .7s;
     opacity: 1;
     animation-fill-mode: forwards;
 }
