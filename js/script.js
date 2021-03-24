@@ -23,13 +23,64 @@ function smoothScrollToPage() {
 
 
 
+const cursor = document.querySelector('.cursor');
+function mouse(e) {
+    const hoverElems = document.querySelectorAll('a');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.top = `${e.clientY}px`
+        cursor.style.left = `${e.clientX}px`
+        hoverElems.forEach(elem => {
+            elem.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            elem.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+    });
+} mouse();
+
+
+
 
 function changeOnScroll() {
-    
     window.addEventListener('scroll', (e) => {
         const pageHeight = document.documentElement.scrollHeight;
         const halfHeight = +(window.innerHeight / 2);
         const scrollY = window.pageYOffset;
+        
+        
+        function cursorChange() {
+            const homePage = document.querySelector('.home').offsetHeight; 
+            const aboutMePage = document.querySelector('.about-me-page').offsetHeight; 
+            const photoBlock = document.querySelector('.photo-block').offsetHeight; 
+            const fourPagesHeight = homePage + aboutMePage + photoBlock;
+            const projectsPage = document.querySelector('.projects-page'); 
+
+            if (scrollY < halfHeight) {
+                cursor.classList.remove('cursor-dark');
+            } 
+            else if (scrollY > halfHeight && scrollY < fourPagesHeight) {
+                cursor.classList.add('cursor-dark');
+            } 
+            else if (scrollY > fourPagesHeight && scrollY + scrollY + window.innerHeight < pageHeight / 1.1) {
+                projectsPage.addEventListener('mouseenter', () => {
+                    cursor.classList.remove('cursor-dark');
+                });
+                projectsPage.addEventListener('mouseleave', () => {
+                    cursor.classList.add('cursor-dark');
+                });
+            } 
+            else if (scrollY + window.innerHeight > pageHeight / 1.1 && scrollY + window.innerHeight < pageHeight / 1.02) {            
+                cursor.classList.add('cursor-dark');
+            } 
+            else if (scrollY + window.innerHeight > pageHeight / 1.02) {
+                    cursor.classList.remove('cursor-dark');
+            } 
+        } cursorChange()
+
+
         
         function firstPage_focusChange() {
             const bg = document.querySelector('.bg');
