@@ -46,6 +46,13 @@ button, input, textarea {
     width: 100px;
     box-shadow: 0 0 30px 0 rgb(86 183 255 / 60%);
 }
+/* .cursor-hover_light {
+    border: 1px solid rgb(237, 74, 77);
+    background-color: rgb(86, 183, 255, .2);
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 30px 0 rgb(237 74 77 / 60%);
+} */
 
 
 
@@ -57,7 +64,7 @@ button, input, textarea {
     background-color: #070707;
     transition: all 1s ease;
     transition-delay: 0.1s;
-    position: relative; 
+    position: relative;
     z-index: -1;
 }
 
@@ -65,19 +72,19 @@ button, input, textarea {
 
 
 .home {
-    min-height: 500px;
+    min-height: 400px;
     height: 100vh;
     padding: 0 4%;
     transition: all 1s ease;
     transition-delay: 0.1s;
-    /* overflow: hidden; */
+    overflow: hidden;
     
     /* background: #070707;   */
     /* background: -webkit-linear-gradient(to bottom, #141414, #070707); 
     background: linear-gradient(to bottom, #141414, #070707);  */
 }
 .white-bg, .home-white {
-    transition: all .6s ease;
+    transition: all .8s ease;
     background-color: #E2E1DF;
 }
 
@@ -169,7 +176,6 @@ button, input, textarea {
     transition-duration: 0.15s;
     z-index: 2;
 }
-
 .language-line {
     height: 30px;
     width: 2px;
@@ -177,7 +183,6 @@ button, input, textarea {
     transition: all 0.15s ease-in;
     z-index: 2;
 }
-
 .ua-language {
     font-size: 20px;
     color: #828282;
@@ -460,7 +465,7 @@ button, input, textarea {
 .description {
     width: 45%;
     line-height: 35px;
-    padding: 1% 0 0 0
+    padding: 1% 0 0 0;
 }
 
 
@@ -478,7 +483,7 @@ button, input, textarea {
 .chart_active {
     transition-delay: .2s;
     box-shadow: -20px 40px 60px 0px rgb(38 38 38 / 20%);
-    background-color: #E9E9E6;
+    /* background-color: #E9E9E6; */
     border-radius: 50px;
     transform: scale3d(1.02, 1.02, 1.02);
 }
@@ -496,7 +501,6 @@ button, input, textarea {
     background: #b9b9b9;
     padding: 13px 16px;
     border-radius: 50px;
-    transition: all 0.2s ease;
     height: 25px;
     transition: all 0.4s ease-in;
 }
@@ -589,7 +593,7 @@ button, input, textarea {
     display: flex;
     align-items: center;
     z-index: 2;
-    transition: all .15s ease;
+    transition: all .12s ease;
 }
 
 .photo {
@@ -823,7 +827,7 @@ button, input, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #262626;
+    background-color: #2b2a2a;
     transition: all 0.2s ease;
     transition-delay: 0.2s;
 }
@@ -855,8 +859,13 @@ button, input, textarea {
     line-height: 24px;
 }
 
-
-
+.pr-name_small {
+    font-size: 45px;
+    transition: all 0.3s ease;
+    color: #B3C99D;
+    display: none;
+    margin: 8px 0;
+}
 
 .border:hover  {
     background-color: #9CB089;
@@ -881,6 +890,14 @@ button, input, textarea {
     height: 205px;
 }
 
+
+.border:hover .pr-name_small {
+    color: white;
+    transform: scale3d(0.95, 0.95, 0.95);
+}
+.border:hover .pr-line_small {
+    width: 80px;
+}
 
 .border:hover .project {
     background-color: #9CB089;
@@ -927,7 +944,7 @@ button, input, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 8% 0 3% 0;   
+    margin: 8% 0 3% 0;
 }
 
 .download-main {
@@ -1108,11 +1125,10 @@ button, input, textarea {
     height: 500px;
     width: 500px;
     transform: translateY(0);
-    box-shadow: 0 0 80px 0 rgb(21 21 20 / 50%);
+    box-shadow: 50px 100px 150px -30px rgb(2 2 30 / 60%);
 }
 
 .ball-text {
-    color: #5C9BC1;
     color: #E2E1DF;
     font-size: 80px;
     text-align: center;
@@ -1123,7 +1139,7 @@ button, input, textarea {
 .ball_active {
     height: 300%;
     width: 300%;
-    border-radius: 100px;
+    border-radius: 50px;
 }
 .ball-text_active {
     font-size: 0;
@@ -1144,6 +1160,7 @@ button, input, textarea {
 /* ---------------contact-page----------------- */
 .contact-page {
     height: 90%;
+    min-height: 700px;
     width: 90%;
     display: flex;
     justify-content: space-evenly;
@@ -1236,8 +1253,12 @@ button, input, textarea {
     border-radius: 25px;
 }
 
+.form {
+    margin: 1% 0;
+}
+
 .input-shell {
-    margin: 0 0 8% 0;
+    margin: 2% 0 6% 0;
 }
 .input, .input_active {
     width: 550px;
@@ -1319,9 +1340,6 @@ button, input, textarea {
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease;
-    font-size: 24px;
-}
-.contact-button p {
     font-size: 25px;
 }
 
@@ -1362,7 +1380,7 @@ button, input, textarea {
     * {
         font-size: 22px;
     }
-    #home {
+    .home {
         padding: 0 5%;
     }
 
@@ -1491,7 +1509,7 @@ button, input, textarea {
     }
 
     /* ===========first-page=========== */
-    #home {
+    .home {
         padding: 0 3%;
     }
     .nav-list {
@@ -1525,6 +1543,13 @@ button, input, textarea {
     }
     /* ===========/first-page=========== */
 
+    .photo-block {
+        height: 400px;
+        padding: 30px 0 110px 0;
+    }
+    .photo {
+        width: 600px;
+    }
 
     /* ===========second-page=========== */
     .chart-title {
@@ -1606,6 +1631,15 @@ button, input, textarea {
         width: 90%;
     }
     /* ===========/fourth-page=========== */
+
+    .input, .input_active {
+        width: 450px;
+        height: 50px;
+    }
+    .textarea {
+        width: 450px;
+        height: 200px;
+    }
 }
 
 
@@ -1615,9 +1649,186 @@ button, input, textarea {
 
  
 @media (max-width: 1000px) {
-    
-}
+    * {
+        font-size: 18px;
+    }
 
+    .description h1, .skills-title h1, .download-title h1 {
+        font-size: 65px;
+    }
+
+    /* ===========first-page=========== */
+    .nav-list li {
+        margin: 0 0 0 40px;
+    }
+
+    /* .hello {
+        font-size: 67px;
+    } */
+    .who-am-i {
+        min-width: 200px;
+    }
+
+
+    /* .home-button {
+        height: 70px;
+        width: 230px;
+        font-size: 33px;
+    }
+    .home-button:hover {
+        font-size: 32px;
+    } */
+    /* ===========/first-page=========== */
+
+    .photo-block {
+        height: 350px;
+        padding: 30px 0 110px 0;
+    }
+    .photo {
+        width: 550px;
+    }
+
+    /* ===========second-page=========== */
+    .about-me-page {
+        padding: 3% 6% 180px 6%;
+        height: 950px;
+    }
+    .about-me-main {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .description {
+        width: 85%;
+        line-height: 30px;
+        padding: 1% 0 0 0;
+    }
+    .description p {
+        text-align: center;
+    }
+    .ul-description {
+        margin: 4% 0 0 0;
+        text-align: center;
+    }
+
+    .chart {
+        width: 75%;
+        max-width: 1000px;
+        background-color: inherit;
+        padding: 10px 0 20px 0;
+        margin-top: 50px;
+    }
+    .chart_active {
+        box-shadow: 0 0 80px 0px rgb(38 38 38 / 20%);
+    }
+
+
+    .about-me_h1-title {
+        margin: 0 0 10% 0;
+        text-align: center;
+    }
+
+    .skill-top h2 {
+        font-size: 28px;
+    }
+
+    .skills-page {
+        height: 650px;
+    }
+    .skill {
+        height: 300px;
+        width: 240px;
+    }
+    /* ===========/second-page=========== */
+
+
+
+    /* ===========third-page=========== */
+    .projects-page {
+        height: 1650px;
+    }
+
+    .margin {
+        margin: 9% 0 0 0;
+    }
+
+    .border {
+        background-color: #1b1b1b;
+        height: 400px;
+        width: 450px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #2b2a2a;
+        /* box-shadow: 0 0 50px 0 rgb(0 0 0 / 20%); */
+    }
+    .border:hover {
+        border: 1px solid #9CB089;
+    }
+
+    .project-foto {
+        width: 450px;
+        background-color: #1b1b1b;
+    }
+    .projects-line {
+        display: none;
+    }
+    .content {
+        display: none;
+    }
+    .pr-name_small {
+        display: block;
+    }
+    .view-more {
+        height: 74px;
+        width: 230px;
+        font-size: 24px;
+        margin: 25% 0 0 0;
+    }
+    /* ===========/third-page=========== */
+
+
+    /* ===========fourth-page=========== */
+    .download-title {
+        width: 92%;
+    }
+    .download-title h1 {
+        text-align: center;
+        font-size: 65px;
+    }
+    /* ===========/fourth-page=========== */
+    .ball {
+        height: 400px;
+        width: 400px;
+        transition: all 1s ease;
+    }
+    .for-ball {
+        height: 450px;
+        width: 450px;
+    }
+    .ball-text {
+        font-size: 70px;
+    }
+    .ball-hover:hover {
+        height: 500px;
+        width: 500px;
+    }
+
+    .ball_active {
+        height: 300%;
+        width: 300%;
+        border-radius: 50px;
+    }
+    .ball-text_active {
+        font-size: 0;
+    }
+
+    .contact-info {
+        display: none;
+    }
+}
 
 
 
@@ -1625,9 +1836,224 @@ button, input, textarea {
 
  
 @media (max-width: 768px) {
+    * {
+        font-size: 17px;
+    }
 
+    .description h1, .skills-title h1, .download-title h1 {
+        font-size: 54px;
+    }
+
+    /* ===========first-page=========== */
+    .home {
+        padding: 0;
+    }
+
+    .home-title-container {
+        /* height: 90px; */
+        margin-left: 25px;
+    }
+
+    .language-change {
+        width: 80px;
+    }
+    .en-language {
+        font-size: 25px;
+    }
+    .language-line {
+        height: 25px;
+    }
+    .ua-language {
+        font-size: 15px;
+    }
+
+    .main-left-side {
+        width: 0;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .greetings {
+        text-align: center;
+        width: 95vw;
+    }
+    .hello {
+        font-size: 58px;
+        margin-bottom: 5px;
+    }
+    .who-am-i {
+        line-height: 60px;
+        width: 500px;
+        font-size: 58px;
+        width: 100%;
+    }
+
+    .home-button {
+        height: 60px;
+        width: 190px;
+        font-size: 30px;
+    }
+    .home-button:hover {
+        font-size: 29px;
+    }
+    /* ===========/first-page=========== */
+
+    .photo-block {
+        height: 280px;
+        /* padding: 30px 0 110px 0; */
+    }
+    .photo {
+        width: 390px;
+    }
+    
+    /* ===========second-page=========== */
+    .about-me-page {
+        padding: 3% 0 180px 0;
+        height: 950px;
+    }
+
+    .chart {
+        width: 85%;
+    }
+    .chart-title-li {
+        display: flex;
+        justify-content: center;
+    }
+    .chart-title {
+        margin: 20px 0 15px 0;
+        font-size: 40px;
+    }
+    .chart-row {
+        margin: 17px 0;
+        height: 22px;
+    }
+
+
+    .skills-title h1 {
+        text-align: center;
+    }
+
+    .all-skills {
+        margin: 1%;
+    }
+    .skill-top h2 {
+        font-size: 28px;
+    }
+    .skill {
+        height: 300px;
+        width: 240px;
+        margin-top: 40px;
+    }
+    /* ===========/second-page=========== */
+
+    /* ===========third-page=========== */
+    .projects-page {
+        height: 1430px;
+    }
+
+    .title-projects h1 {
+        font-size: 75px;
+    }
+
+    .border {
+        height: 350px;
+        width: 400px;
+    }
+
+
+    .title-projects {
+        top: 0;
+    }
+    .all-projects {
+        margin: 10px 0 0 0;
+    }
+    .pr-name_small {
+        font-size: 35px;
+    }
+
+    .view-more {
+        height: 72px;
+        width: 210px;
+        font-size: 22px;
+        margin: 23% 0 0 0;
+    }
+    /* ===========/third-page=========== */
+    .download-button {
+        height: 62px;
+        width: 210px;
+        font-size: 26px;
+    }
+
+
+
+    .ball {
+        height: 320px;
+        width: 320px;
+        transition: all 1s ease;
+    }
+    .for-ball {
+        height: 370px;
+        width: 370px;
+    }
+    .ball-text {
+        font-size: 55px;
+    }
+    .ball-hover:hover {
+        height: 410px;
+        width: 410px;
+    }
+
+    .ball_active {
+        height: 300%;
+        width: 300%;
+        border-radius: 50px;
+    }
+    .ball-text_active {
+        font-size: 0;
+    }
+    .contact-title {
+        font-size: 54px;
+    }
+
+    .input, .input_active {
+        width: 350px;
+        height: 45px;
+    }
+    .textarea {
+        width: 350px;
+        height: 180px;
+    }
+    .input-name {
+        top: 15px;
+    }
+
+    .contact-button {
+        width: 150px;
+        height: 55px;
+        font-size: 23px;
+    }
+
+    .input-shell {
+        margin: 5% 0 10% 0;
+    }
 }
 
+
+
+
+@media (max-width: 604px) {
+    .skills-page {
+        height: 1000px;
+    }
+}
 
 
 
@@ -1635,5 +2061,252 @@ button, input, textarea {
 
  
 @media (max-width: 480px) {
+    * {
+        font-size: 15px;
+    }
 
+    .description h1, .skills-title h1, .download-title h1 {
+        font-size: 44px;
+    }
+
+    .up {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    /* ===========first-page=========== */
+    .home {
+        padding: 0;
+    }
+
+    .home-title-container {
+        height: 80px; 
+        margin-left: 25px;
+    }
+
+    .language-change {
+        width: 60px;
+    }
+    .en-language {
+        font-size: 20px;
+    }
+    .language-line {
+        height: 20px;
+    }
+    .ua-language {
+        font-size: 12px;
+    }
+
+    .main-left-side {
+        width: 0;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .greetings {
+        text-align: center;
+        width: 100vw;
+    }
+    .hello {
+        font-size: 58px;
+        margin-bottom: 5px;
+    }
+    .who-am-i {
+        line-height: 60px;
+        width: 500px;
+        font-size: 58px;
+        width: 100%;
+    }
+
+    .home-button {
+        height: 53px;
+        width: 170px;
+        font-size: 25px;
+    }
+    .home-button:hover {
+        font-size: 24px;
+    }
+
+
+    .scroll {
+        font-size: 10px;
+    }
+    /* ===========/first-page=========== */
+
+    .photo-block {
+        height: 240px;
+    }
+    .photo {
+        width: 310px;
+        margin-right: 0.2%;
+    }
+    
+    /* ===========second-page=========== */
+    .about-me-page {
+        padding: 3% 0 80px 0;
+        height: 950px;
+    }
+
+    .what-can-i-do {
+        width: 88%;
+    }
+    .chart {
+        width: 90%;
+    }
+    .chart-title-li {
+        display: flex;
+        justify-content: center;
+    }
+    .chart-title {
+        margin: 15px 0 5px 0;
+        font-size: 30px;
+    }
+    .chart-row {
+        margin: 12px 0;
+        height: 17px;
+    }
+
+
+    .skills-page {
+        height: 940px;
+    }
+    .skill-top h2 {
+        font-size: 24px;
+    }
+    .skill {
+        height: 260px;
+        width: 210px;
+        margin-top: 30px;
+    }
+    .skill-text {
+        margin: 20px 0 0 0;
+    }
+    .skill-bottom {
+        padding: 5px 40px 0 40px;
+    }
+    .skill-logo {
+        margin-bottom: 10px;
+    }
+    /* ===========/second-page=========== */
+
+    /* ===========third-page=========== */
+    .projects-page {
+        height: 1050px;
+    }
+
+    .title-projects h1 {
+        font-size: 60px;
+    }
+
+    .border {
+        height: 250px;
+        width: 280px;
+    }
+
+    .title-projects {
+        top: -28px;
+    }
+    .all-projects {
+        margin: 0;
+        position: relative;
+        top: -10px;
+    }
+    .pr-name_small {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .view-more {
+        height: 60px;
+        width: 180px;
+        font-size: 18px;
+        margin: 23% 0 0 0;
+    }
+    /* ===========/third-page=========== */
+    .download-button {
+        height: 55px;
+        width: 160px;
+        font-size: 23px;
+    }
+
+
+
+    .ball {
+        height: 230px;
+        width: 230px;
+    }
+    .for-ball {
+        height: 280px;
+        width: 280px;
+    }
+    .ball-text {
+        font-size: 45px;
+    }
+    .ball-hover:hover {
+        height: 300px;
+        width: 300px;
+    }
+
+    .ball_active {
+        height: 300%;
+        width: 300%;
+        border-radius: 50px;
+    }
+    .ball-text_active {
+        font-size: 0;
+    }
+    .contact-title {
+        font-size: 45px;
+    }
+    /* .contact-border {
+        height: 95%;
+    } */
+    .contact-page {
+        min-height: 500px;
+        max-height: 600px;
+    }
+
+    .input-shell {
+        margin: 4% 0 8% 0;
+    }
+    .input, .input_active {
+        width: 240px;
+        height: 35px;
+    }
+    .textarea {
+        width: 240px;
+        height: 130px;
+    }
+    .input-name {
+        top: 11px;
+    }
+
+    .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
+        transform: translateY(-28px);
+        font-size: 12px;
+    }
+
+    .contact-button {
+        width: 120px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+@media (max-height: 700px) {
+    .scroll-shell {
+        bottom: 20px;
+    }
 }
