@@ -28,6 +28,7 @@ function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
 
     document.addEventListener('mousemove', (e) => {
+        cursor.style.display = 'block';
         cursor.style.top = `${e.clientY}px`
         cursor.style.left = `${e.clientX}px`
         hoverElems.forEach(elem => {
@@ -44,11 +45,43 @@ function mouse(e) {
 
 
 
+
+function touchActions() {
+    document.addEventListener('touchstart', () => {
+        cursor.style.display = 'none';
+        
+    });
+    if (cursor.style.display = 'none') {
+        document.addEventListener('click', () => {
+            cursor.style.display = 'none';
+        });
+    }
+
+} touchActions();
+
+
+
+
+
+
 function changeOnScroll() {
     window.addEventListener('scroll', (e) => {
         const pageHeight = document.documentElement.scrollHeight;
         const halfHeight = +(window.innerHeight / 2);
         const scrollY = window.pageYOffset;
+
+        const finalPage = document.querySelector('.final-page');
+        const bgFinall = document.querySelector('.final-bg');
+        if (window.innerWidth < 1000 && window.innerWidth > 480) {
+            finalPage.style.height = '140vh';
+            bgFinall.style.height = '140vh';
+        } else if (window.innerWidth < 480) {
+            finalPage.style.height = '150vh';
+            bgFinall.style.height = '150vh';
+        } else { 
+            finalPage.style.height = '120vh';
+            bgFinall.style.height = '120vh';
+        }
         
         
         function cursorChange() {
@@ -72,10 +105,10 @@ function changeOnScroll() {
                     cursor.classList.add('cursor-dark');
                 });
             } 
-            else if (scrollY + window.innerHeight > pageHeight / 1.1 && scrollY + window.innerHeight < pageHeight / 1.02) {            
+            else if (scrollY + window.innerHeight > pageHeight / 1.1 && scrollY < pageHeight - finalPage.offsetHeight) {            
                 cursor.classList.add('cursor-dark');
             } 
-            else if (scrollY + window.innerHeight > pageHeight / 1.02) {
+            else if (scrollY > pageHeight - finalPage.offsetHeight) {
                     cursor.classList.remove('cursor-dark');
             } 
         } cursorChange()
@@ -128,17 +161,20 @@ function changeOnScroll() {
             const chartTitle = document.querySelector('.chart-title');
             const chart_rowAll = document.querySelectorAll('.chart-row');
             const chart_pAll = document.querySelectorAll('.chart p');
-    
-            if (scrollY > halfHeight && scrollY < window.innerHeight * 1.83) {
-                chart.classList.add('chart_active');
-                chartTitle.style.color = '#DD9238';
-                chart_rowAll.forEach(elem => {elem.style.background = '#DD9238'});
-                chart_pAll.forEach(text => {text.style.color = '#966326'});
+
+            function chartToggle(classToggle, titleAndRowColor, textColor) {
+                classToggle;
+                chartTitle.style.color = titleAndRowColor;
+                chart_rowAll.forEach(elem => {elem.style.background = titleAndRowColor});
+                chart_pAll.forEach(text => {text.style.color = textColor});
+            }
+
+            if (window.innerWidth < 1000) {
+                if (scrollY > halfHeight) chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
+                else chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
             } else {
-                chart.classList.remove('chart_active');
-                chartTitle.style.color = '#b9b9b9';
-                chart_rowAll.forEach(elem => {elem.style.background = '#b9b9b9'});
-                chart_pAll.forEach(text => {text.style.color = '#b9b9b9'});
+                if (scrollY > halfHeight && scrollY < window.innerHeight * 1.83) chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
+                else chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
             }
         } chart();
         
@@ -147,7 +183,7 @@ function changeOnScroll() {
         function upButton() {
             const up = document.querySelector('.up');
 
-            if (scrollY > halfHeight && scrollY + window.innerHeight < pageHeight / 1.02) {
+            if (scrollY > halfHeight && scrollY < pageHeight - finalPage.offsetHeight) {
                 up.classList.add('up_active');
             } else {
                 up.classList.remove('up_active');
@@ -174,56 +210,52 @@ function changeOnScroll() {
 
 
 
-        function finalPage() {
+        function finalPageFunc() {
             const ball = document.querySelector('.ball');
             const ballText = document.querySelector('.ball-text');
             const contactPage = document.querySelector('.contact-page');
             const contactInfo = document.querySelector('.contact-info');
             const contactBorder = document.querySelector('.contact-border');
-            const finalPage = document.querySelector('.final-page');
-            const bgFinall = document.querySelector('.final-bg');
-        
-            function el() {
-                finalPage.scrollIntoView({
-                    block: "end", 
-                    behavior: "smooth"
-                });
-                setTimeout(() => {
-                    ballText.classList.add('ball-text_active');
-                    ball.classList.remove('ball-hover');
-                    ball.classList.add('ball_active');
 
-                    contactPage.classList.add('contact-page_active');
-                    contactInfo.classList.add('contact-info_active');
-                    contactBorder.classList.add('contact-border_active');
-                }, 200);
-             }
 
-            if (scrollY + window.innerHeight > pageHeight / 1.02) {
+            if (scrollY > pageHeight - finalPage.offsetHeight) {
                 bgFinall.style.transform = 'translateY(0)';
                 ballText.style.color = '#5C9BC1';
                 ball.classList.add('for-ball');
-
-                ball.addEventListener('click', el);
-                 
+                
+                ball.addEventListener('click', () => {
+                    finalPage.scrollIntoView({
+                        block: "end", 
+                        behavior: "smooth"
+                    });
+                    setTimeout(() => {
+                        ballText.classList.add('ball-text_active');
+                        ball.classList.remove('ball-hover');
+                        ball.classList.add('ball_active');
+                        
+                        contactPage.classList.add('contact-page_active');
+                        contactInfo.classList.add('contact-info_active');
+                        contactBorder.classList.add('contact-border_active');
+                    }, 200);
+                });
+                
             } else {
-                // ball.removeEventListener('click', el);
                 ballText.classList.remove('ball-text_active');
                 ball.classList.add('ball-hover');
                 ball.classList.remove('ball_active');
-
+                
                 contactPage.classList.remove('contact-page_active');
                 contactInfo.classList.remove('contact-info_active');
                 contactBorder.classList.remove('contact-border_active');
-
+                
                 bgFinall.style.transform = `translateY(100%)`;
                 ballText.style.color = '#E2E1DF';
                 ball.classList.remove('for-ball');
             }
-        } finalPage();
-
-        
-    });
+            } finalPageFunc();
+            
+            
+        });
 } changeOnScroll();
 
 

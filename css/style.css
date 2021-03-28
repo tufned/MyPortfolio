@@ -18,14 +18,13 @@ button, input, textarea {
 }
 
 
-
 .cursor {
     border: 3px solid #E2E1DF;
     background-color: #E2E1DF;
     height: 10px;
     width: 10px;
     position: fixed;
-    border-radius: 50px;
+    border-radius: 500px;
     box-sizing: border-box;
     box-shadow: 0 0 30px 0 rgb(0 0 0 / 15%);
     transform: translate(-50%, -50%);
@@ -33,6 +32,7 @@ button, input, textarea {
     transition-property: width, height, background;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(.2, .96, .34, 1);
+    display: none;
 }
 .cursor-dark {
     border: 3px solid #070707;
@@ -359,7 +359,7 @@ button, input, textarea {
 
 .home-button {
     margin-top: 19px;
-    height: 75px;
+    height: 85px;
     width: 255px;
     border-radius: 15px;
     font-size: 40px;
@@ -393,7 +393,6 @@ button, input, textarea {
     background-color: #E9E9E6;
     height: 55px;
     width: 40px;
-    max-width: 45px;
     border-radius: 50px;
     position: fixed;
     left: 40px;
@@ -472,11 +471,10 @@ button, input, textarea {
 
 .chart {
     width: 50%;
-    max-width: 1000px;
+    max-width: 1600px;
     background-color: inherit;
     padding: 10px 0 20px 0;
     transition: all .4s ease;
-    transition-delay: 0s;
     border-radius: 25px;
     transform: translateX(15%) scale3d(0.995, 0.995, 0.995);
 }
@@ -503,6 +501,13 @@ button, input, textarea {
     border-radius: 50px;
     height: 25px;
     transition: all 0.4s ease-in;
+}
+.chart-row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 100%;
 }
 
 
@@ -883,7 +888,7 @@ button, input, textarea {
     transform: scale3d(0.95, 0.95, 0.95) translateX(-10px);
 }
 .border:hover .content-in p {
-    width: 360px;
+    /* width: 360px; */
     transform: scale3d(0.95, 0.95, 0.95) translateX(-10px);
 }
 .border:hover .projects-line {
@@ -894,9 +899,6 @@ button, input, textarea {
 .border:hover .pr-name_small {
     color: white;
     transform: scale3d(0.95, 0.95, 0.95);
-}
-.border:hover .pr-line_small {
-    width: 80px;
 }
 
 .border:hover .project {
@@ -974,9 +976,6 @@ button, input, textarea {
     height: 3px;
     width: 100px;
     background-color: #828282;
-
-    animation-name: line-hide;
-    animation-duration: 1.4s;
 }
 
 
@@ -999,58 +998,6 @@ button, input, textarea {
     transition: all .5s ease;
 }
 
-/* .download-button-accepted {
-    position: absolute;
-    bottom: 72px;
-    height: 70px;
-    width: 250px;
-    background-color: #828282;
-    border: 3px solid #ED4A4D;
-    border-radius: 15px;
-
-    animation-name: download-button;
-    animation-duration: 1s;
-    z-index: -1;
-}
-
-.link-download-button {
-    animation-name: line-hide;
-    animation-duration: 1.4s;
-} */
-
-
-
-/* -------button-animation------- */
-/* @keyframes download-button {
-    40% {
-        transform: translateY(-70px);
-        border-radius: 100px;
-        height: 90px;
-        width: 90px;
-    }
-    80% {
-        transform: translateY(-70px);
-        border-radius: 100px;
-        height: 90px;
-        width: 90px;
-    }
-    90% {
-        transform: translateY(0);
-        border-radius: 100px;
-        height: 90px;
-        width: 90px;
-    }
-}
-
-@keyframes line-hide {
-    10% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-} */
-/* -------/button-animation------- */
 
 
 .download-button-border:hover .download-button {
@@ -1371,34 +1318,830 @@ button, input, textarea {
 
 
 
-
-
-
-
-
-@media (min-width: 1800px) {
+@media (min-width: 3200px) {
     * {
-        font-size: 22px;
+        font-size: 50px;
     }
+
+
+    .up {
+        height: 130px;
+        width: 100px;
+        left: 80px;
+        bottom: 70px;
+    }
+    .arrow {
+        height: 55px;
+        width: 10px;
+    }
+    .left-arrow {
+        transform: rotate(40deg);
+        left: 29px;
+    }
+    .right-arrow {
+        transform: rotate(-40deg);
+        right: 29px;
+    }
+    
+    .up:hover .left-arrow{
+        transform: translateY(-12px) rotate(40deg);
+    }
+    .up:hover .right-arrow{
+        transform: translateY(-12px) rotate(-40deg);
+    }
+
+
+    .cursor {
+        height: 24px;
+        width: 24px;
+    }
+    .cursor-hover {
+        height: 240px;
+        width: 240px;
+    }
+
+
+    .description h1, .skills-title h1, .download-title h1 {
+        font-size: 160px;
+    }
+    .title-projects h1 {
+        font-size: 180px;
+    }
+    .scroll-shell {
+        margin-bottom: 140px;
+    }
+    .scroll {
+        font-size: 35px;
+        width: 350px;
+        letter-spacing: 16px;
+        transform: translateY(80px);
+    }
+
+
+
+
+    .home-title-container {
+        height: 230px;
+        margin-left: 60px;
+    }
+    .language-change {
+        width: 250px;
+        height: 180px;
+        border-radius: 15px;
+        padding: 0 15px;
+    }
+    
+    .language-animation-shell {
+        width: 320px;
+        height: inherit;
+        border-radius: 35px;
+    }
+    
+    .language-change:hover .language-animation{
+        width: 320px;
+        height: 130px;
+        border-radius: 30px;
+    }
+
+    .en-language {
+        font-size: 80px;
+    }
+    .language-line {
+        height: 80px;
+        width: 3px;
+    }
+    .ua-language {
+        font-size: 55px;
+    }
+    .language-change:hover .language-line {
+        height: 75px;
+    }
+    .language-change:hover .ua-language {
+        transform: scale3d(1.5, 1.5, 1.5) translateX(4px);
+    }
+
+
+
+    .main-left-side {
+        width: 600px;
+    }
+    .hello {
+        font-size: 180px;
+    }
+    .who-am-i {
+        font-size: 185px;
+        width: 1400px;
+    }
+
+    .nav-list li {
+        margin: 0 0 0 220px;
+    }
+
+    .home-button {
+        height: 170px;
+        width: 480px;
+        font-size: 80px;
+        border-radius: 35px;
+    }
+    .home-button:hover {
+        font-size: 78px;
+    }
+
+
+    
+    .about-me-page {
+        padding: 4% 8% 140px 8%;
+        height: 1150px;
+    }
+    .ul-description {
+        margin: 6% 0 0;
+    }
+    .description p {
+        line-height: 65px;
+    }
+    .chart_active {
+        border-radius: 100px;
+    }
+    .ul-description li {
+        margin-top: 2.8%;
+    }
+
+
+    .chart-title {
+        font-size: 90px;
+        margin: 25px 0 35px 20px;
+    }
+    .chart-row {
+        margin: 38px 0;
+        height: 80px;
+        padding: 14px 15px;
+    }
+
+
+    .photo-block {
+        height: 800px;
+        padding: 30px 0 110px 0;
+    }
+    .photo-block-main {
+        width: 7000px;
+    }
+    .photo {
+        border-radius: 40px;
+        width: 1300px;
+    }
+
+
+    .skills-page {
+        height: 1100px;
+    }
+    .skill {
+        height: 600px;
+        width: 520px;
+        border-radius: 30px;
+    }
+    .skill-bottom, .skill-top {
+        height: 60%;
+    }
+
+    .skill-top h2  {
+        font-size: 70px;
+    }
+    .skill-text {
+        font-size: 37px;
+    }
+    .logo-bg {
+        height: 170px;
+        width: 170px;
+        border-radius: 16px;
+    }
+    .js {
+        font-size: 60px;
+    }
+
+    .logo-bg-2 {
+        width: 240px;
+    }
+    .html {
+        color: #727272;
+        font-size: 80px;
+    }
+    .skill-line {
+        width: 140px;
+    }
+    .skill-bottom {
+        padding: 0 40px;
+    }
+
+
+
+    
+
+    .projects-page {
+        margin-top: 8%;
+        height: 2550px;
+    }
+
+    .projects-page::before {
+        height: 300px;
+        position: relative;
+        bottom: -100px;
+    }
+    .projects-page::after {
+        height: 300px;
+    }
+    .all-projects {
+        margin-top: -50px;
+    }
+    .title-projects {
+        top: 0;
+    }
+
+    .border:hover .content-in p {
+        width: 380px;
+    }
+    .border {
+        height: 550px;
+        width: 1900px;
+        border-radius: 60px;
+    }
+    .project {
+        border-radius: 60px;
+    }
+    .project-foto {
+        width: 850px;
+        border-radius: 60px;
+    }
+    .projects-line {
+        height: 380px;
+   }
+   .border:hover .projects-line {
+        height: 300px;
+   }
+
+    .content {
+        width: 700px;
+    }
+    .content-in h3 {
+        font-size: 80px;
+        margin: 0 0 30px 0;
+    }
+    .content-in p {
+        line-height: 40px;
+        width: 600px;
+        font-size: 45px;
+    }
+    .border:hover .content-in p {
+        width: 600px;
+    }
+
+    .view-more {
+        height: 160px;
+        width: 480px;
+        font-size: 55px;
+        border-radius: 80px;
+        margin: 24% 0 0;
+    }
+
+
+    .download-page {
+        height: 750px;
+    }
+    .download-line {
+        height: 5px;
+        width: 300px;
+    }
+    .download-button-border {
+        padding: 5px;
+        border-radius: 30px;
+    }
+    .download-button {
+        height: 160px;
+        width: 500px;
+        border-radius: 27px;
+        font-size: 70px;
+    }
+
+
+
+    .ball {
+        height: 850px;
+        width: 850px;
+    }
+    .for-ball {
+        height: 1000px;
+        width: 1000px;
+        border-radius: 800px;
+    }
+    .ball-text {
+        font-size: 160px;
+    }
+    .ball-hover:hover {
+        height: 1200px;
+        width: 1200px;
+        border-radius: 800px;
+    }
+    .ball_active {
+        height: 300%;
+        width: 300%;
+        border-radius: 800px;
+    }
+    .ball-text_active {
+        font-size: 0;
+    }
+
+    .contact-main {
+        height: 110%;
+    }
+    .contact-info {
+        width: 700px;
+        height: 70%;
+    }
+    .input, .input_active {
+        width: 1000px;
+        height: 110px;
+        border-radius: 80px;
+    }
+    .textarea {
+        width: 1000px;
+        height: 400px;
+        border-radius: 50px;
+    }
+    .contact-title {
+        font-size: 130px;
+    }
+    .contact-button, .contact-button-shell {
+        border-radius: 20px;
+    }
+    .contact-button {
+        width: 300px;
+        height: 100px;
+        font-size: 55px;
+    }
+    .contact-border {
+        height: 800px;
+        max-height: none;
+        width: initial;
+    }
+    @keyframes contact-border_active {
+        40% {
+            transform: translateX(-8%) translateY(-180px);
+        }
+        100% {
+            transform: translateX(0) translateY(-180px);
+            opacity: 1;
+        }
+    }
+
+    .input {
+        padding: 0 60px;
+    }
+    .textarea {
+        padding: 30px 60px;
+    }
+    .input-name {
+        font-size: 40px;
+        left: 55px;
+        top: 34px;
+    }
+    .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
+        font-size: 30px;
+        transform: translateY(-80px);
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 2560px) and (max-width: 3199px) {
+    * {
+        font-size: 28px;
+    }
+
+
+    .up {
+        height: 95px;
+        width: 70px;
+        left: 60px;
+        bottom: 50px;
+    }
+    .arrow {
+        height: 40px;
+        width: 7px;
+    }
+    .left-arrow {
+        transform: rotate(40deg);
+        left: 19.5px;
+    }
+    .right-arrow {
+        transform: rotate(-40deg);
+        right: 19.5px;
+    }
+    
+    .up:hover .left-arrow{
+        transform: translateY(-10px) rotate(40deg);
+    }
+    .up:hover .right-arrow{
+        transform: translateY(-10px) rotate(-40deg);
+    }
+
+
+    .cursor {
+        height: 15px;
+        width: 15px;
+    }
+    .cursor-hover {
+        height: 140px;
+        width: 140px;
+    }
+
+
+    .description h1, .skills-title h1, .download-title h1 {
+        font-size: 110px;
+    }
+    .title-projects h1 {
+        font-size: 120px;
+    }
+    .scroll-shell {
+        margin-bottom: 50px;
+    }
+    .scroll {
+        font-size: 20px;
+        width: 150px;
+    }
+
+    .home-title-container {
+        height: 90px;
+        margin-left: 60px;
+    }
+    .language-change {
+        width: 160px;
+        height: 180px;
+        border-radius: 15px;
+        padding: 0 15px;
+    }
+    
+    .language-animation-shell {
+        width: 200px;
+        height: inherit;
+        border-radius: 25px;
+    }
+    
+    .language-change:hover .language-animation{
+        width: 200px;
+        height: 80px;
+    }
+
+    .en-language {
+        font-size: 50px;
+    }
+    .language-line {
+        height: 50px;
+        width: 2px;
+    }
+    .ua-language {
+        font-size: 35px;
+    }
+    .language-change:hover .language-line {
+        height: 45px;
+    }
+    .language-change:hover .ua-language {
+        transform: scale3d(1.5, 1.5, 1.5) translateX(-2px);
+    }
+
+    .main-left-side {
+        width: 300px;
+    }
+    .hello {
+        font-size: 120px;
+    }
+    .who-am-i {
+        font-size: 123px;
+        width: 950px;
+    }
+
+    .nav-list li {
+        margin: 0 0 0 120px;
+    }
+
+    .home-button {
+        height: 110px;
+        width: 305px;
+        font-size: 50px;
+        border-radius: 25px;
+    }
+    .home-button:hover {
+        border: 7px solid #5C9BC1;
+        font-size: 48px;
+    }
+    .home-button:active {
+        border: 7px solid #365D74;
+    }
+
+
+    
+    .about-me-page {
+        padding: 4% 8% 140px 8%;
+        height: 750px;
+    }
+    .ul-description {
+        margin: 4% 0 0;
+    }
+    .description p {
+        line-height: 40px;
+    }
+    .chart_active {
+        border-radius: 65px;
+    }
+
+
+    .chart-title {
+        font-size: 75px;
+        margin: 25px 0 35px 20px;
+    }
+    .chart-row {
+        margin: 25px 0;
+        height: 40px;
+        padding: 14px 15px;
+    }
+
+
+    .photo-block {
+        height: 600px;
+        padding: 30px 0 110px 0;
+    }
+    .photo-block-main {
+        width: 6000px;
+    }
+    .photo {
+        width: 900px;
+    }
+
+
+    .skills-page {
+        height: 850px;
+    }
+    .skill {
+        height: 440px;
+        width: 370px;
+        border-radius: 20px;
+    }
+    .skill-bottom, .skill-top {
+        height: 55%;
+        width: initial;
+    }
+
+    .skill-top h2  {
+        font-size: 45px;
+    }
+    .skill-text {
+        font-size: 25px;
+    }
+    .logo-bg {
+        height: 110px;
+        width: 110px;
+    }
+    .js {
+        font-size: 45px;
+    }
+
+    .logo-bg-2 {
+        width: 180px;
+    }
+    .html {
+        color: #727272;
+        font-size: 55px;
+    }
+    .skill-line {
+        width: 100px;
+    }
+    .skill-bottom {
+        padding: 0 40px;
+    }
+
+
+    .projects-page {
+        margin-top: 8%;
+        height: 1850px;
+    }
+
+    .projects-page::before {
+        height: 300px;
+        position: relative;
+        bottom: -100px;
+    }
+    .projects-page::after {
+        height: 300px;
+    }
+    .all-projects {
+        margin-top: -100px;
+    }
+    .title-projects {
+        top: 0px;
+    }
+
+    .border:hover .content-in p {
+        width: 380px;
+    }
+    .border {
+        height: 400px;
+        width: 1400px;
+        border-radius: 50px;
+    }
+    .project {
+        border-radius: 50px;
+    }
+    .project-foto {
+        width: 600px;
+        border-radius: 50px;
+    }
+    .projects-line {
+        height: 280px;
+   }
+   .border:hover .projects-line {
+        height: 240px;
+   }
+
+    .content {
+        width: 500px;
+    }
+
+    .content-in h3 {
+        font-size: 60px;
+        margin: 0 0 30px 0;
+    }
+    .content-in p {
+        line-height: 30px;
+    }
+
+    .view-more {
+        height: 100px;
+        width: 330px;
+        font-size: 35px;
+        border-radius: 50px;
+    }
+
+
+    .download-page {
+        height: 500px;
+    }
+    .download-line {
+        height: 3px;
+        width: 200px;
+    }
+    .download-button-border {
+        border-radius: 20px;
+    }
+    .download-button {
+        height: 100px;
+        width: 350px;
+        border-radius: 17px;
+        font-size: 44px;
+    }
+
+
+
+    .ball {
+        height: 600px;
+        width: 600px;
+    }
+    .for-ball {
+        height: 700px;
+        width: 700px;
+    }
+    .ball-text {
+        font-size: 100px;
+    }
+    .ball-hover:hover {
+        height: 800px;
+        width: 800px;
+    }
+    .ball_active {
+        height: 300%;
+        width: 300%;
+        border-radius: 50px;
+    }
+    .ball-text_active {
+        font-size: 0;
+    }
+
+    .contact-main {
+        height: 90%;
+    }
+    .contact-info {
+        width: 700px;
+        height: 80%;
+    }
+    .input, .input_active {
+        width: 800px;
+        height: 80px;
+        border-radius: 50px;
+    }
+    .textarea {
+        width: 800px;
+        height: 350px;
+        border-radius: 50px;
+    }
+    .contact-title {
+        font-size: 100px;
+    }
+    .contact-button {
+        width: 250px;
+        height: 80px;
+        font-size: 35px;
+    }
+    .contact-border {
+        height: 800px;
+        max-height: none;
+        width: initial;
+    }
+    @keyframes contact-border_active {
+        40% {
+            transform: translateX(-8%) translateY(-120px);
+        }
+        100% {
+            transform: translateX(0) translateY(-120px);
+            opacity: 1;
+        }
+    }
+
+    .input {
+        padding: 0 40px;
+    }
+    .textarea {
+        padding: 30px 40px;
+    }
+    .input-name {
+        font-size: 28px;
+        left: 35px;
+        top: 25px;
+    }
+    .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
+        font-size: 25px;
+        transform: translateY(-60px);
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1800px) and (max-width: 2559px) {
+    * {
+        font-size: 24px;
+    }
+
+    .up {
+        height: 85px;
+        width: 60px;
+        left: 60px;
+        bottom: 50px;
+    }
+    .arrow {
+        height: 35px;
+        width: 6px;
+    }
+    .left-arrow {
+        left: 17px;
+    }
+    .right-arrow {
+        right: 17px;
+    }
+    
+    .up:hover .left-arrow{
+        transform: translateY(-8px) rotate(40deg);
+    }
+    .up:hover .right-arrow{
+        transform: translateY(-8px) rotate(-40deg);
+    }
+
+    .cursor {
+        height: 13px;
+        width: 13px;
+    }
+    .cursor-hover {
+        height: 120px;
+        width: 120px;
+    }
+
     .home {
         padding: 0 5%;
     }
 
     .description h1, .skills-title h1, .download-title h1 {
-        font-size: 85px;
+        font-size: 95px;
     }
     .title-projects h1 {
-        font-size: 95px;
+        font-size: 110px;
     }
     .scroll-shell {
         margin-bottom: 45px;
-    }
-
-    .home-title {
-        font-size: 54px;
-    }
-    .home-title:hover {
-        font-size: 52px;
     }
 
     .main-left-side {
@@ -1449,9 +2192,21 @@ button, input, textarea {
         font-size: 25px;
     }
 
-
     .chart-title {
         font-size: 50px;
+    }
+
+
+
+    .photo-block {
+        height: 500px;
+        padding: 40px 0 120px 0;
+    }
+    .photo-block-main {
+        width: 7000px;
+    }
+    .photo {
+        width: 800px;
     }
 
 
@@ -1477,18 +2232,25 @@ button, input, textarea {
     }
 
     .title-projects {
-        top: -20px;
+        top: -10px;
+    }
+    .content-in h3 {
+        font-size: 50px;
+    }
+    .content-in p {
+        width: 400px;
     }
 
     .border:hover .content-in p {
-        width: 380px;
+        /* width: 380px; */
     }
+
 
 
     .input-name {
         font-size: 20px;
     }
-    .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name {
+    .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
         font-size: 18px;
     }
 }
