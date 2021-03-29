@@ -23,12 +23,17 @@ function smoothScrollToPage() {
 
 
 
+
+
 const cursor = document.querySelector('.cursor');
 function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
 
     document.addEventListener('mousemove', (e) => {
-        cursor.style.display = 'block';
+        window.addEventListener('resize', () => {
+            cursor.style.display = 'block';
+        });
+        cursor.style.opacity = '1';
         cursor.style.top = `${e.clientY}px`
         cursor.style.left = `${e.clientX}px`
         hoverElems.forEach(elem => {
@@ -44,19 +49,10 @@ function mouse(e) {
 
 
 
-
-
 function touchActions() {
     document.addEventListener('touchstart', () => {
         cursor.style.display = 'none';
-        
     });
-    if (cursor.style.display = 'none') {
-        document.addEventListener('click', () => {
-            cursor.style.display = 'none';
-        });
-    }
-
 } touchActions();
 
 
@@ -66,9 +62,10 @@ function touchActions() {
 
 function changeOnScroll() {
     window.addEventListener('scroll', (e) => {
-        const pageHeight = document.documentElement.scrollHeight;
-        const halfHeight = +(window.innerHeight / 2);
+        const homePage = document.querySelector('.home').offsetHeight; 
+        const halfHeight = +(homePage / 2);
         const scrollY = window.pageYOffset;
+        const pageHeight = document.documentElement.scrollHeight;
 
         const finalPage = document.querySelector('.final-page');
         const bgFinall = document.querySelector('.final-bg');
@@ -85,7 +82,6 @@ function changeOnScroll() {
         
         
         function cursorChange() {
-            const homePage = document.querySelector('.home').offsetHeight; 
             const aboutMePage = document.querySelector('.about-me-page').offsetHeight; 
             const photoBlock = document.querySelector('.photo-block').offsetHeight; 
             const fourPagesHeight = homePage + aboutMePage + photoBlock;
@@ -192,12 +188,18 @@ function changeOnScroll() {
 
 
 
-        function scrollPrompt() {
+        function scrollAndHeaderPrompt() {
             const scroll = document.querySelector('.scroll-shell');
+            const header = document.querySelector('.header');
 
-            if (scrollY > 40) scroll.classList.remove('scroll-shell_active');
-            else scroll.classList.add('scroll-shell_active');
-        } scrollPrompt();
+            if (scrollY > 70) {
+                scroll.classList.remove('scroll-shell_active');
+                header.classList.add('header_up');
+            } else {
+                scroll.classList.add('scroll-shell_active');
+                header.classList.remove('header_up');
+            }
+        } scrollAndHeaderPrompt();
 
 
 

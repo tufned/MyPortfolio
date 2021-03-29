@@ -32,7 +32,7 @@ button, input, textarea {
     transition-property: width, height, background;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(.2, .96, .34, 1);
-    display: none;
+    opacity: 0;
 }
 .cursor-dark {
     border: 3px solid #070707;
@@ -97,10 +97,17 @@ button, input, textarea {
     padding: 1% 1% 0 1%;
     animation: header 1s ease-out;
     animation-fill-mode: forwards;
+    transition: all .3s ease-in-out;
     opacity: 0;
 
 
     opacity: 1;
+}
+
+.header_up {
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all .3s ease-out;
 }
 
 /* @keyframes header{
@@ -118,7 +125,7 @@ button, input, textarea {
 }
 
 .home-title-container {
-    height: 90px;
+    height: 100%;
     display: flex;
     align-items: center;
     margin-left: 60px;
@@ -1318,9 +1325,9 @@ button, input, textarea {
 
 
 
-@media (min-width: 3200px) {
+@media (min-width: 3800px) {
     * {
-        font-size: 50px;
+        font-size: 40px;
     }
 
 
@@ -1371,47 +1378,49 @@ button, input, textarea {
         margin-bottom: 140px;
     }
     .scroll {
-        font-size: 35px;
+        font-size: 25px;
         width: 350px;
         letter-spacing: 16px;
         transform: translateY(80px);
+    }
+    .scroll:hover {
+        letter-spacing: 14px;
     }
 
 
 
 
     .home-title-container {
-        height: 230px;
         margin-left: 60px;
     }
     .language-change {
-        width: 250px;
+        width: 230px;
         height: 180px;
         border-radius: 15px;
         padding: 0 15px;
     }
     
     .language-animation-shell {
-        width: 320px;
+        width: 300px;
         height: inherit;
         border-radius: 35px;
     }
     
     .language-change:hover .language-animation{
-        width: 320px;
+        width: 300px;
         height: 130px;
         border-radius: 30px;
     }
 
     .en-language {
-        font-size: 80px;
+        font-size: 75px;
     }
     .language-line {
-        height: 80px;
+        height: 75px;
         width: 3px;
     }
     .ua-language {
-        font-size: 55px;
+        font-size: 50px;
     }
     .language-change:hover .language-line {
         height: 75px;
@@ -1426,10 +1435,10 @@ button, input, textarea {
         width: 600px;
     }
     .hello {
-        font-size: 180px;
+        font-size: 170px;
     }
     .who-am-i {
-        font-size: 185px;
+        font-size: 175px;
         width: 1400px;
     }
 
@@ -1438,21 +1447,22 @@ button, input, textarea {
     }
 
     .home-button {
-        height: 170px;
-        width: 480px;
-        font-size: 80px;
+        height: 160px;
+        width: 470px;
+        font-size: 77px;
         border-radius: 35px;
     }
     .home-button:hover {
-        font-size: 78px;
+        font-size: 75px;
     }
-
+    
 
     
     .about-me-page {
         padding: 4% 8% 140px 8%;
         height: 1150px;
     }
+
     .ul-description {
         margin: 6% 0 0;
     }
@@ -1474,7 +1484,8 @@ button, input, textarea {
     .chart-row {
         margin: 38px 0;
         height: 80px;
-        padding: 14px 15px;
+        border-radius: 100px;
+        padding: 14px 25px;
     }
 
 
@@ -1504,10 +1515,10 @@ button, input, textarea {
     }
 
     .skill-top h2  {
-        font-size: 70px;
+        font-size: 60px;
     }
     .skill-text {
-        font-size: 37px;
+        font-size: 35px;
     }
     .logo-bg {
         height: 170px;
@@ -1526,7 +1537,7 @@ button, input, textarea {
         font-size: 80px;
     }
     .skill-line {
-        width: 140px;
+        width: 100px;
     }
     .skill-bottom {
         padding: 0 40px;
@@ -1538,7 +1549,7 @@ button, input, textarea {
 
     .projects-page {
         margin-top: 8%;
-        height: 2550px;
+        height: 2500px;
     }
 
     .projects-page::before {
@@ -1586,20 +1597,20 @@ button, input, textarea {
         margin: 0 0 30px 0;
     }
     .content-in p {
-        line-height: 40px;
+        line-height: 45px;
         width: 600px;
-        font-size: 45px;
+        font-size: 35px;
     }
     .border:hover .content-in p {
         width: 600px;
     }
 
     .view-more {
-        height: 160px;
-        width: 480px;
-        font-size: 55px;
+        height: 140px;
+        width: 420px;
+        font-size: 40px;
         border-radius: 80px;
-        margin: 24% 0 0;
+        margin: 30% 0 0;
     }
 
 
@@ -1615,10 +1626,10 @@ button, input, textarea {
         border-radius: 30px;
     }
     .download-button {
-        height: 160px;
-        width: 500px;
+        height: 135px;
+        width: 420px;
         border-radius: 27px;
-        font-size: 70px;
+        font-size: 50px;
     }
 
 
@@ -1626,6 +1637,7 @@ button, input, textarea {
     .ball {
         height: 850px;
         width: 850px;
+        border-radius: 800px;
     }
     .for-ball {
         height: 1000px;
@@ -1715,7 +1727,7 @@ button, input, textarea {
 
 
 
-@media (min-width: 2560px) and (max-width: 3199px) {
+@media (min-width: 2560px) and (max-width: 3799px) {
     * {
         font-size: 28px;
     }
@@ -1773,7 +1785,6 @@ button, input, textarea {
     }
 
     .home-title-container {
-        height: 90px;
         margin-left: 60px;
     }
     .language-change {
@@ -1791,7 +1802,8 @@ button, input, textarea {
     
     .language-change:hover .language-animation{
         width: 200px;
-        height: 80px;
+        height: 100px;
+        border-radius: 25px;
     }
 
     .en-language {
@@ -1844,8 +1856,12 @@ button, input, textarea {
     
     .about-me-page {
         padding: 4% 8% 140px 8%;
-        height: 750px;
+        height: 790px;
     }
+    .about-me_h1-title {
+        margin: 0 0 8% 5%;
+    }
+
     .ul-description {
         margin: 4% 0 0;
     }
@@ -1863,8 +1879,8 @@ button, input, textarea {
     }
     .chart-row {
         margin: 25px 0;
-        height: 40px;
-        padding: 14px 15px;
+        height: 50px;
+        padding: 14px 20px;
     }
 
 
@@ -1881,15 +1897,19 @@ button, input, textarea {
 
 
     .skills-page {
-        height: 850px;
+        height: 800px;
     }
+    .all-skills {
+        margin-top: 4%;
+    }
+
     .skill {
         height: 440px;
         width: 370px;
         border-radius: 20px;
     }
     .skill-bottom, .skill-top {
-        height: 55%;
+        height: 60%;
         width: initial;
     }
 
@@ -1924,7 +1944,7 @@ button, input, textarea {
 
     .projects-page {
         margin-top: 8%;
-        height: 1850px;
+        height: 1870px;
     }
 
     .projects-page::before {
@@ -2094,24 +2114,24 @@ button, input, textarea {
 
 @media (min-width: 1800px) and (max-width: 2559px) {
     * {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .up {
-        height: 85px;
-        width: 60px;
+        height: 75px;
+        width: 50px;
         left: 60px;
         bottom: 50px;
     }
     .arrow {
-        height: 35px;
+        height: 30px;
         width: 6px;
     }
     .left-arrow {
-        left: 17px;
+        left: 13.5px;
     }
     .right-arrow {
-        right: 17px;
+        right: 13.5px;
     }
     
     .up:hover .left-arrow{
@@ -2177,8 +2197,8 @@ button, input, textarea {
     }
 
     .skill {
-        height: 380px;
-        width: 340px;
+        height: 350px;
+        width: 310px;
     }
     .skill-bottom, .skill-top {
         height: 50%;
@@ -2187,9 +2207,6 @@ button, input, textarea {
 
     .skill-top h2  {
         font-size: 40px;
-    }
-    .skill-text {
-        font-size: 25px;
     }
 
     .chart-title {
@@ -2240,11 +2257,6 @@ button, input, textarea {
     .content-in p {
         width: 400px;
     }
-
-    .border:hover .content-in p {
-        /* width: 380px; */
-    }
-
 
 
     .input-name {
@@ -2453,7 +2465,7 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 6% 180px 6%;
-        height: 950px;
+        height: 970px;
     }
     .about-me-main {
         justify-content: center;
@@ -2479,7 +2491,7 @@ button, input, textarea {
         max-width: 1000px;
         background-color: inherit;
         padding: 10px 0 20px 0;
-        margin-top: 50px;
+        margin-top: 90px;
     }
     .chart_active {
         box-shadow: 0 0 80px 0px rgb(38 38 38 / 20%);
@@ -2612,7 +2624,6 @@ button, input, textarea {
     }
 
     .home-title-container {
-        /* height: 90px; */
         margin-left: 25px;
     }
 
@@ -2627,6 +2638,20 @@ button, input, textarea {
     }
     .ua-language {
         font-size: 15px;
+    }
+
+
+    .language-animation-shell {
+        width: 110px;
+    }
+    .language-animation{
+        width: 105px;
+        height: 50px;
+        opacity: 1;
+    }
+    .language-change:hover .language-animation{
+        width: 105px;
+        height: 50px;
     }
 
     .main-left-side {
@@ -2679,11 +2704,12 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 0 180px 0;
-        height: 950px;
+        height: 930px;
     }
 
     .chart {
         width: 85%;
+        margin-top: 90px;
     }
     .chart-title-li {
         display: flex;
@@ -2858,6 +2884,23 @@ button, input, textarea {
     .ua-language {
         font-size: 12px;
     }
+    
+    .language-change {
+        height: 100px;
+    }
+    .language-animation-shell {
+        width: 90px;
+    }
+    .language-animation{
+        width: 85px;
+        height: 45px;
+        opacity: 1;
+    }
+    .language-change:hover .language-animation{
+        width: 85px;
+        height: 45px;
+    }
+    
 
     .main-left-side {
         width: 0;
@@ -2914,13 +2957,14 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 0 80px 0;
-        height: 950px;
+        height: 930px;
     }
 
     .what-can-i-do {
         width: 88%;
     }
     .chart {
+        margin-top: 70px;
         width: 90%;
     }
     .chart-title-li {
@@ -2929,7 +2973,7 @@ button, input, textarea {
     }
     .chart-title {
         margin: 15px 0 5px 0;
-        font-size: 30px;
+        font-size: 32px;
     }
     .chart-row {
         margin: 12px 0;
