@@ -28,26 +28,32 @@ function smoothScrollToPage() {
 const cursor = document.querySelector('.cursor');
 function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
 
     document.addEventListener('mousemove', (e) => {
-        // if (window.innerWidth > 768) {
+        if (window.innerWidth != windowWidth) {
+            cursor.style.display = 'block';
+        }
+        // if (window.innerWidth < 768) {
+
             // window.addEventListener('resize', () => {
             //     cursor.style.display = 'block';
             // });
-            cursor.style.opacity = '1';
-            cursor.style.top = `${e.clientY}px`
-            cursor.style.left = `${e.clientX}px`
-            hoverElems.forEach(elem => {
-                elem.addEventListener('mouseenter', () => {
-                    cursor.classList.add('cursor-hover');
-                });
-                elem.addEventListener('mouseleave', () => {
-                    cursor.classList.remove('cursor-hover');
-                });
-            });
-        // } else {
-            // cursor.style.display = 'none';
         // }
+
+        cursor.style.opacity = '1';
+        cursor.style.top = `${e.clientY}px`
+        cursor.style.left = `${e.clientX}px`
+        hoverElems.forEach(elem => {
+            elem.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            elem.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+
     });
 } mouse();
 
