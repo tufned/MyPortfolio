@@ -23,11 +23,11 @@ function smoothScrollToPage() {
 
 
 
-function homeHeight() {
-    const homePage = document.querySelector('.home')
-    homePage.style.height = window.innerHeight + 'px';
-}
-window.addEventListener('load', homeHeight);
+// function homeHeight() {
+const homePage = document.querySelector('.home')
+homePage.style.height = window.innerHeight + 'px';
+// }
+// window.addEventListener('load', homeHeight);
 // window.addEventListener('resize', homeHeight);
 
 
