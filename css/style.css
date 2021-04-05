@@ -2453,10 +2453,10 @@ button, input, textarea {
         font-size: 33px;
     } */
     .home-button:hover {
-        border: 4px solid #5C9BC1;
+        border: 1px solid #5C9BC1;
     }
     .home-button:active {
-        border: 4px solid #365D74;
+        border: 1px solid #365D74;
     }
     /* ===========/first-page=========== */
 
