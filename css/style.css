@@ -74,8 +74,8 @@ button, input, textarea {
 
 .home {
     min-height: 400px;
-    min-height: -webkit-fill-available;
-    height: 100vh;
+    /* height: 100vh; */
+    /* min-height: -webkit-fill-available; */
     padding: 0 4%;
     transition: all 1s ease;
     transition-delay: 0.1s;
@@ -85,11 +85,10 @@ button, input, textarea {
     /* background: -webkit-linear-gradient(to bottom, #141414, #070707); 
     background: linear-gradient(to bottom, #141414, #070707);  */
 }
-.white-bg, .home-white {
-    transition: all .8s ease;
+.white-bg {
+    transition: all 1s ease;
     background-color: #E2E1DF;
 }
-
 
 .header {
     min-height: 90px;
@@ -790,7 +789,6 @@ button, input, textarea {
     background: linear-gradient(120deg, #4692C8, #9CB089); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgb(77 163 224 / 8%);
 }
 
 
@@ -2790,7 +2788,7 @@ button, input, textarea {
     }
     .download-button {
         height: 62px;
-        width: 210px;
+        width: 240px;
         font-size: 26px;
     }
 
@@ -3057,7 +3055,7 @@ button, input, textarea {
     }
     .download-button {
         height: 55px;
-        width: 160px;
+        width: 190px;
         font-size: 23px;
     }
 
