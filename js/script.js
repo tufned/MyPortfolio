@@ -28,7 +28,6 @@ function smoothScrollToPage() {
 const cursor = document.querySelector('.cursor');
 function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
-
     document.addEventListener('mousemove', (e) => {
         window.addEventListener('resize', () => {
             cursor.style.display = 'block';
@@ -47,13 +46,14 @@ function mouse(e) {
     });
 } mouse();
 
-
-
-function touchActions() {
-    document.addEventListener('touchstart', () => {
+function touchAction(action) {
+    document.addEventListener(action, () => {
         cursor.style.display = 'none';
     });
-} touchActions();
+} 
+touchAction('touchstart');
+touchAction('touchend');
+touchAction('touchmove');
 
 
 
