@@ -20,8 +20,8 @@ button, input, textarea {
 
 
 .cursor {
-    border: 3px solid #E2E1DF;
-    background-color: #E2E1DF;
+    border: 3px solid white;
+    background-color: white;
     height: 10px;
     width: 10px;
     position: fixed;
@@ -36,8 +36,8 @@ button, input, textarea {
     opacity: 0;
 }
 .cursor-dark {
-    border: 3px solid #070707;
-    background-color: #070707;
+    border: 3px solid black;
+    background-color: black;
 }
 
 .cursor-hover {
@@ -74,6 +74,7 @@ button, input, textarea {
 
 .home {
     min-height: 400px;
+    min-height: -webkit-fill-available;
     height: 100vh;
     padding: 0 4%;
     transition: all 1s ease;
@@ -2571,6 +2572,9 @@ button, input, textarea {
 
 
     /* ===========fourth-page=========== */
+    .download-page {
+        margin: 12% 0 3%;
+    }
     .download-title {
         width: 92%;
     }
@@ -2780,6 +2784,10 @@ button, input, textarea {
         margin: 23% 0 0 0;
     }
     /* ===========/third-page=========== */
+    .download-page {
+        height: 350px; 
+        margin: 18% 0 3%;
+    }
     .download-button {
         height: 62px;
         width: 210px;
@@ -3043,6 +3051,10 @@ button, input, textarea {
         margin: 23% 0 0 0;
     }
     /* ===========/third-page=========== */
+    .download-page {
+        height: 350px; 
+        margin: 25% 0 3%;
+    }
     .download-button {
         height: 55px;
         width: 160px;
@@ -3122,3 +3134,11 @@ button, input, textarea {
         bottom: 20px;
     }
 }
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus, textarea:focus, input:focus {
+            font-size: 16px;
+        }
+    }

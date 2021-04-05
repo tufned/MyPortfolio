@@ -29,17 +29,10 @@ const cursor = document.querySelector('.cursor');
 function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
     const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
 
     document.addEventListener('mousemove', (e) => {
-        if (window.innerWidth != windowWidth) {
-            cursor.style.display = 'block';
-        }
-        // if (window.innerWidth < 768) {
-
-            // window.addEventListener('resize', () => {
-            //     cursor.style.display = 'block';
-            // });
+        // if (window.innerWidth != windowWidth) {
+        //     cursor.style.display = 'block';
         // }
 
         cursor.style.opacity = '1';
@@ -63,6 +56,7 @@ function touchAction(action) {
     });
 } 
 touchAction('touchstart');
+touchAction('touchend');
 
 
 
@@ -102,7 +96,7 @@ function changeOnScroll() {
             else if (scrollY > halfHeight && scrollY < fourPagesHeight) {
                 cursor.classList.add('cursor-dark');
             } 
-            else if (scrollY > fourPagesHeight && scrollY + scrollY + window.innerHeight < pageHeight / 1.1) {
+            else if (scrollY > fourPagesHeight && scrollY + window.innerHeight < pageHeight / 1.2) {
                 projectsPage.addEventListener('mouseenter', () => {
                     cursor.classList.remove('cursor-dark');
                 });
@@ -110,7 +104,7 @@ function changeOnScroll() {
                     cursor.classList.add('cursor-dark');
                 });
             } 
-            else if (scrollY + window.innerHeight > pageHeight / 1.1 && scrollY < pageHeight - finalPage.offsetHeight) {            
+            else if (scrollY + window.innerHeight > pageHeight / 1.2 && scrollY < pageHeight - finalPage.offsetHeight) {            
                 cursor.classList.add('cursor-dark');
             } 
             else if (scrollY > pageHeight - finalPage.offsetHeight) {
