@@ -74,8 +74,7 @@ button, input, textarea {
 
 .home {
     min-height: 400px;
-    height: 100vh;
-    /* min-height: -webkit-fill-available; */
+    /* height: 100vh; */
     padding: 0 4%;
     transition: all 1s ease;
     transition-delay: 0.1s;
