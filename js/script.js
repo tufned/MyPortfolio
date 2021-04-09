@@ -23,12 +23,46 @@ function smoothScrollToPage() {
 
 
 
-// function homeHeight() {
-const homePage = document.querySelector('.home')
-homePage.style.height = window.innerHeight + 'px';
-// }
-// window.addEventListener('load', homeHeight);
-// window.addEventListener('resize', homeHeight);
+function homeHeight() {
+    const homePage = document.querySelector('.home')
+    homePage.style.height = window.innerHeight + 'px';
+} homeHeight();
+
+
+
+
+
+
+function languages() {
+    const langButton = document.querySelector('.language-change');
+    const firstLang = document.querySelector('.first-language');
+
+    langButton.addEventListener('click', () => {
+        if (firstLang.innerHTML == 'EN') {
+            localStorage.setItem('lang', 'ua')
+        } else if (firstLang.innerHTML == 'UA') {
+            localStorage.setItem('lang', 'en')
+        }
+        location.reload();
+    });
+    
+    let exactLang = localStorage.getItem('lang');
+    if (exactLang == 'ua') return languageChange('ua');
+    if (exactLang == '') return languageChange('en');
+    
+    function languageChange(language) {
+        for (let key in languageArr) {
+            document.querySelector(`.${key}`).innerHTML = languageArr[key][language];
+
+            if (key == 't-i-2') {
+                document.querySelector('.text-info').style.width = '100%';
+                document.querySelector('.t-i-1').style.textAlign = 'center';
+            }
+        }
+    }
+} languages();
+
+
 
 
 
@@ -36,24 +70,21 @@ homePage.style.height = window.innerHeight + 'px';
 const cursor = document.querySelector('.cursor');
 function mouse(e) {
     const hoverElems = document.querySelectorAll('a');
-    const windowWidth = window.innerWidth;
+    const langButton = document.querySelector('.language-change');
 
     document.addEventListener('mousemove', (e) => {
-        // if (window.innerWidth != windowWidth) {
-        //     cursor.style.display = 'block';
-        // }
-
         cursor.style.opacity = '1';
         cursor.style.top = `${e.clientY}px`
         cursor.style.left = `${e.clientX}px`
         hoverElems.forEach(elem => {
-            elem.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-hover');
-            });
-            elem.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-hover');
-            });
+            elem.addEventListener('mouseenter', cursorAdd);
+            elem.addEventListener('mouseleave', cursorRemove);
         });
+        langButton.addEventListener('mouseenter', cursorAdd);
+        langButton.addEventListener('mouseleave', cursorRemove);
+
+        function cursorAdd() {cursor.classList.add('cursor-hover')}
+        function cursorRemove() {cursor.classList.remove('cursor-hover')}
 
     });
 } mouse();
@@ -177,11 +208,19 @@ function changeOnScroll() {
             }
 
             if (window.innerWidth < 1000) {
-                if (scrollY > halfHeight) chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
-                else chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
+                if (scrollY > halfHeight) {
+                    chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
+                }
+                else {
+                    chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
+                }
             } else {
-                if (scrollY > halfHeight && scrollY < window.innerHeight * 1.83) chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
-                else chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
+                if (scrollY > halfHeight && scrollY < window.innerHeight * 1.83) {
+                    chartToggle(chart.classList.add('chart_active'), '#DD9238', '#966326');
+                }
+                else {
+                    chartToggle(chart.classList.remove('chart_active'), '#b9b9b9', '#b9b9b9');
+                }
             }
         } chart();
         
@@ -216,7 +255,7 @@ function changeOnScroll() {
 
         function photoBlockMove() {
             const photoBlock = document.querySelector('.photo-block-main');
-            let option = scrollY / 1.5;
+            let option = scrollY / 1.8;
 
             photoBlock.style.transform = `translateX(-${option}px)`;
         } photoBlockMove();
@@ -229,12 +268,16 @@ function changeOnScroll() {
             const contactPage = document.querySelector('.contact-page');
             const contactInfo = document.querySelector('.contact-info');
             const contactBorder = document.querySelector('.contact-border');
+            const contactLinks = document.querySelector('.contact-links');
+            const contactArrow = document.querySelector('.contact-arrow');
+            const contactLines = document.querySelectorAll('.arrow-line');
 
 
             if (scrollY > pageHeight - finalPage.offsetHeight) {
                 bgFinall.style.transform = 'translateY(0)';
-                ballText.style.color = '#5C9BC1';
+                ballText.style.color = '#5BA2D6';
                 ball.classList.add('for-ball');
+                contactLinks.classList.add('for-contact-links');
                 
                 ball.addEventListener('click', () => {
                     finalPage.scrollIntoView({
@@ -249,6 +292,11 @@ function changeOnScroll() {
                         contactPage.classList.add('contact-page_active');
                         contactInfo.classList.add('contact-info_active');
                         contactBorder.classList.add('contact-border_active');
+                        contactArrow.classList.add('for-contact-arrow');
+
+                        contactLines.forEach(line => {
+                            line.classList.remove('straight-line');
+                        });
                     }, 200);
                 });
                 
@@ -256,6 +304,7 @@ function changeOnScroll() {
                 ballText.classList.remove('ball-text_active');
                 ball.classList.add('ball-hover');
                 ball.classList.remove('ball_active');
+                contactLinks.classList.remove('for-contact-links');
                 
                 contactPage.classList.remove('contact-page_active');
                 contactInfo.classList.remove('contact-info_active');
@@ -264,12 +313,39 @@ function changeOnScroll() {
                 bgFinall.style.transform = `translateY(100%)`;
                 ballText.style.color = '#E2E1DF';
                 ball.classList.remove('for-ball');
+                contactArrow.classList.remove('for-contact-arrow');
+                contactLines.forEach(line => {
+                    line.classList.add('straight-line');
+                });
             }
             } finalPageFunc();
             
             
         });
 } changeOnScroll();
+
+
+
+
+function contactLinks() {
+    const linkedInLink = document.querySelector('.linkedin-link');
+    const gitLink = document.querySelector('.git-link');
+    const linkedInIcon = document.querySelector('.linkedin-link img');
+    const gitIcon = document.querySelector('.git-link img');
+
+    linkedInLink.addEventListener('mouseenter', () => {
+        linkedInIcon.src = 'icons/linkedIn-white.png'
+    });
+    linkedInLink.addEventListener('mouseleave', () => {
+        linkedInIcon.src = 'icons/linkedIn-black.png'
+    });
+    gitLink.addEventListener('mouseenter', () => {
+        gitIcon.src = 'icons/GitHub-Mark-Light-120px-plus.png'
+    });
+    gitLink.addEventListener('mouseleave', () => {
+        gitIcon.src = 'icons/GitHub-Mark-120px-plus.png'
+    });
+} contactLinks();
 
 
 

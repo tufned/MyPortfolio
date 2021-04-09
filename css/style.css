@@ -63,7 +63,7 @@ button, input, textarea {
 }
 .bg {
     background-color: #070707;
-    transition: all 1s ease;
+    transition: all .7s ease;
     transition-delay: 0.1s;
     position: relative;
     z-index: -1;
@@ -85,7 +85,7 @@ button, input, textarea {
     background: linear-gradient(to bottom, #141414, #070707);  */
 }
 .white-bg {
-    transition: all 1s ease;
+    transition: all 1.2s ease;
     background-color: #E2E1DF;
 }
 
@@ -171,13 +171,13 @@ button, input, textarea {
     height: 60px;
 }
 .language-change:active .language-animation{
-    background-color: #5C9BC1;
+    background-color: #4691E7;
 }
 
 
 
 
-.en-language {
+.first-language {
     font-size: 30px;
     transition-timing-function: ease-in;
     transition-duration: 0.15s;
@@ -190,7 +190,7 @@ button, input, textarea {
     transition: all 0.15s ease-in;
     z-index: 2;
 }
-.ua-language {
+.second-language {
     font-size: 20px;
     color: #828282;
     transition-timing-function: ease-in;
@@ -199,7 +199,7 @@ button, input, textarea {
 }
 
 
-.language-change:hover .ua-language {
+.language-change:hover .second-language {
     color: white;
     transform: scale3d(1.5, 1.5, 1.5) translateX(-6px);
 }
@@ -207,7 +207,7 @@ button, input, textarea {
     height: 25px;
     transform: skewX(7deg) translateX(-12px);
 }
-.language-change:hover .en-language {
+.language-change:hover .first-language {
     color: #828282;
     transform: scale3d(0.68, 0.68, 0.68) translateX(-5px);
 }
@@ -236,7 +236,7 @@ button, input, textarea {
     color: white;
 }
 .outline:active {
-    color: #5C9BC1;
+    color: #4691E7;
     transition: all .1s ease;
 }
 
@@ -299,7 +299,7 @@ button, input, textarea {
 }
 .scroll:active {
     letter-spacing: 6px;
-    color: #5C9BC1;
+    color: #4691E7;
     transition: all .1s ease;
 }
 
@@ -335,21 +335,21 @@ button, input, textarea {
     position: relative;
     top: 7px;
     letter-spacing: -2px;
-
-    background: #4692C8;
-    background: linear-gradient(to right, #4692C8, #EEFFBE); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 1s ease;
 }
 .who-am-i {
     font-size: 80px;
     min-width: 400px;
     width: 670px;
     letter-spacing: -2px;
+}
 
-    background: #4692C8;
-    background: linear-gradient(to right, #4692C8, #EEFFBE); 
+.hello, .who-am-i {
+    /* background: #4692C8;
+    background: linear-gradient(to right, #38a7f7, #e7ffa6);  */
+    background: #009FFF;
+    background: -webkit-linear-gradient(-70deg, #ec2F4B, #009FFF); 
+    background: linear-gradient(-90deg, #ec2F4B, #009FFF); 
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 1s ease;
@@ -368,14 +368,14 @@ button, input, textarea {
 
 
 .home-button {
-    height: 85px;
-    width: 255px;
+    height: 80px;
+    width: 230px;
     border-radius: 15px;
     font-size: 40px;
     background-color: inherit;
-    color: #5C9BC1;
+    color: #4691E7;
     transition: all 0.3s ease;
-    border: 3px solid #5C9BC1;
+    border: 3px solid #4691E7;
 }
 .home-button_dark {
     color: #828282;
@@ -383,16 +383,16 @@ button, input, textarea {
 }
 
 .home-button:hover {
-    background-color: #5C9BC1;
+    background-color: #4691E7;
     color: white;
-    border: 8px solid #5C9BC1;
+    border: 8px solid #4691E7;
     font-size: 39px;
 }
 .home-button:active {
     transition: all .1s ease;
-    background-color: #365D74;
+    background-color: #1d3e64;
     color: #E2E1DF;
-    border: 8px solid #365D74;
+    border: 8px solid #1d3e64;
 }
 
 
@@ -447,7 +447,7 @@ button, input, textarea {
 /* ---------------about-me-page----------------- */
 .about-me-page {
     padding: 3% 6% 140px 6%;
-    height: 540px;
+    height: 560px;
     margin-top: 50px;
     overflow: hidden;
 }
@@ -480,19 +480,26 @@ button, input, textarea {
 
 .chart {
     width: 50%;
+    height: 60%;
     max-width: 1600px;
     background-color: inherit;
     padding: 10px 0 20px 0;
-    transition: all .4s ease;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     border-radius: 25px;
     transform: translateX(15%) scale3d(0.995, 0.995, 0.995);
+    -webkit-transform: translateX(15%) scale3d(0.995, 0.995, 0.995);
 }
 .chart_active {
     transition-delay: .2s;
+    -webkit-transition-delay: .2s;
     box-shadow: -20px 40px 60px 0px rgb(38 38 38 / 20%);
-    /* background-color: #E9E9E6; */
+    background-color: #E9E9E6;
     border-radius: 50px;
     transform: scale3d(1.02, 1.02, 1.02);
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    transition: all .6s ease;
+    -webkit-transition: all .6s ease;
 }
 
 
@@ -607,7 +614,7 @@ button, input, textarea {
     display: flex;
     align-items: center;
     z-index: 2;
-    transition: all .12s ease;
+    transition: all .1s ease;
 }
 
 .photo {
@@ -617,6 +624,15 @@ button, input, textarea {
     border-radius: 25px;
     box-shadow: 0px 0px 30px 0 rgb(38 38 38 / 15%);
     background-color: #B1B1B1;
+}
+
+
+
+.photo img{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit:cover;
 }
 
 /* ---------------/photo-block----------------- */
@@ -781,11 +797,13 @@ button, input, textarea {
     z-index: 4;
 }
 .title-projects h1 {
-    font-size: 85px;
+    font-size: 95px;
     color: #9CB089;
     transition: all 1s ease-in;
     background: #4692C8;
-    background: linear-gradient(120deg, #4692C8, #9CB089); 
+    background: linear-gradient(120deg, #505cc4, #a6cc87); 
+    background: -webkit-linear-gradient(-70deg, #db469f, #2188ff);
+    /* background: linear-gradient(120deg, #4692C8, #9CB089);  */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -842,7 +860,7 @@ button, input, textarea {
     align-items: center;
     background-color: #2b2a2a;
     transition: all 0.2s ease;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 
@@ -864,7 +882,7 @@ button, input, textarea {
     font-size: 45px;
     margin: 0 0 30px 0;
     transition: all 0.3s ease;
-    color: #B3C99D;
+    color: #816ED5;
 }
 .content-in p {
     width: 370px;
@@ -875,29 +893,28 @@ button, input, textarea {
 .pr-name_small {
     font-size: 45px;
     transition: all 0.3s ease;
-    color: #B3C99D;
+    color: #816ED5;
     display: none;
     margin: 8px 0;
 }
 
-.border:hover  {
-    background-color: #9CB089;
+.border:hover {
     transition: all 0.3s ease;
-    box-shadow: 0 0 50px 0 rgb(166 187 144 / 80%);
-    transform: scale3d(0.98, 0.98, 0.98);
+    background-color: #816ED5;
+    box-shadow: 0 0 60px 0 rgb(129 110 213);
+    
+    transform: scale3d(0.97, 0.97, 0.97);
 }
-.border:hover .project-foto {
-    box-shadow: 0px 0px 20px -10px #0E0E0E;
-}
+
 
 
 .border:hover .content-in h3 {
     color: white;
-    transform: scale3d(0.95, 0.95, 0.95) translateX(-10px);
+    transform: scale3d(0.95, 0.95, 0.95);
 }
 .border:hover .content-in p {
-    /* width: 360px; */
-    transform: scale3d(0.95, 0.95, 0.95) translateX(-10px);
+    width: 370px;
+    transform: scale3d(0.95, 0.95, 0.95);
 }
 .border:hover .projects-line {
     height: 205px;
@@ -910,31 +927,37 @@ button, input, textarea {
 }
 
 .border:hover .project {
-    background-color: #9CB089;
+    background-color: #816ED5;
 }
 
-
+.border:active .project, .border:active {
+    transition: all .1s ease;
+    background-color: #433a6e;
+}
 
 .view-more {
     height: 75px;
     width: 250px;
     border-radius: 35px;
+    border: 3px solid #816ED5;
+    color: #816ED5;
     font-size: 25px;
     transition: all 0.6s ease;
-    background-color: #9CB089;
+    background-color: inherit;
 
     margin: 30% 0 0 0;
 }
 
 .view-more:hover {
     transition: all 0.3s ease;
-    background-color: #4DA3E0;
-    box-shadow: 0 0 50px -10px #4DA3E0;
-    box-shadow: 0 0 40px 0 rgb(77 163 224 / 60%);
+    color: #fff;
+    background-color: #816ED5;
+    box-shadow: 0 0 40px 0 rgb(129 110 213 / 60%);
 }   
 .view-more:active {
     transition: all .1s ease;
-    background-color: #365D74;
+    background-color: #433a6e;
+    border: 3px solid #433a6e;
 }   
 
 
@@ -971,12 +994,13 @@ button, input, textarea {
 .download-title {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     margin: 3% 0 0 0;
 }
 .download-title h1 {
     color: #ED4A4D;
     font-size: 75px;
+    text-align: center;
 }
 
 
@@ -1046,8 +1070,9 @@ button, input, textarea {
 .final-bg {
     height: 120vh;
     width: 100%;
-    background-color: #5C9BC1;
-    box-shadow: 0 0 100px 0 rgb(21 21 20 / 30%);
+    /* background-color: #5C9BC1; */
+    background: #5BA2D6;
+    background: linear-gradient(30deg, #3c77be, #64c6ec);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1070,24 +1095,26 @@ button, input, textarea {
     width: 450px;
     transform: translateY(100px);
 
-    background-color:#1C1C1C;
+    background-color:#181818;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
+    transition: all 1s ease-out;
+    z-index: 1;
 }
 .for-ball {
     height: 500px;
     width: 500px;
     transform: translateY(0);
-    box-shadow: 50px 100px 150px -30px rgb(2 2 30 / 60%);
+    /* box-shadow: 50px 100px 150px -30px rgb(2 2 30 / 60%); */
 }
 
 .ball-text {
     color: #E2E1DF;
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     transition: all 0.5s ease;
+    letter-spacing: -2px;
 }
 
 /* =========DOM========= */
@@ -1105,15 +1132,122 @@ button, input, textarea {
 
 
 .ball-hover:hover {
-    height: 580px;
-    width: 580px;
+    height: 560px;
+    width: 560px;
+}
+
+
+
+
+.contact-links-shell {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #d4d3d3; */
+}
+.contact-links {
+    height: inherit;
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .8s ease-out;
+    transform: translateY(200%);
+}
+.for-contact-links {
+    transform: translateY(0);
+}
+
+.c-link {
+    border-radius: 100px;
+    height: 65px;
+    width: 65px;
+    /* background-color: #111; */
+    border: 2px solid #111111;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-link:hover {
+    background-color: #111111;
+    /* border: 2px solid #e2e1df; */
+}
+
+.c-link img {
+    height: 40px;
+    width: 40px;
+}
+.linkedin-link img {
+    height: 30px;
+    width: 30px;
+}
+
+.c-link:active {
+    background-color: #fff;
+    border: 2px solid #fff;
 }
 /* ---------------/final-page----------------- */
 
 
+.contact-arrow-shell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.contact-arrow {
+    height: inherit;
+    width: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transition-delay: 0;
+}
+.for-contact-arrow {
+    transition: all .8s ease-out;
+    transition-delay: 2s;
+    transform: translateY(0);
+    opacity: 1;
+}
 
+.arrow-line {
+    height: 45px;
+    width: 4px;
+    background-color: #585858;
+    border-radius: 50px;
+    transition: all .5s ease;
+    transition-delay: 2.8s;
+}
+
+.right-line {
+    transform: rotate(115deg);
+}
+.left-line {
+    transform: rotate(65deg);
+}
+
+.straight-line {
+    transition-delay: 0;
+    transition: all .2s ease;
+    transform: rotate(90deg);
+}
 /* ---------------contact-page----------------- */
 .contact-page {
+    margin-top: 50px;
     height: 90%;
     min-height: 700px;
     width: 90%;
@@ -1129,9 +1263,13 @@ button, input, textarea {
 
 
 .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 450px;
     height: 600px;
-    background-color: #0E0E0E;
+    /* background-color: #0E0E0E; */
     border-radius: 35px;
     opacity: 0;
     transform: translateX(-350%);
@@ -1151,6 +1289,29 @@ button, input, textarea {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+
+.final-photo {
+    height: 70%;
+    width: 80%;
+    background-color: #828282;
+
+    border-radius: 50px;
+}
+
+.text-info {
+    margin-bottom: 40px;
+    width: 75%;
+}
+.contact-info h4 {
+    font-size: 50px;
+    font-style: italic;
+    color: #e2e1df;
+    z-index: 5;
+}
+.t-i-2 {
+    text-align: end;
 }
 
 .contact-border {
@@ -1254,6 +1415,7 @@ button, input, textarea {
     background-color: #fff;
     border: 3px solid #fff;
     color: #151514;
+    font-size: 20px;
 }
 
 .input-name {
@@ -1314,6 +1476,15 @@ button, input, textarea {
 }
 
 /* ---------------/contact-page----------------- */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1413,20 +1584,20 @@ button, input, textarea {
         border-radius: 30px;
     }
 
-    .en-language {
+    .first-language {
         font-size: 75px;
     }
     .language-line {
         height: 75px;
         width: 3px;
     }
-    .ua-language {
+    .second-language {
         font-size: 50px;
     }
     .language-change:hover .language-line {
         height: 75px;
     }
-    .language-change:hover .ua-language {
+    .language-change:hover .second-language {
         transform: scale3d(1.5, 1.5, 1.5) translateX(4px);
     }
 
@@ -1440,7 +1611,7 @@ button, input, textarea {
     }
     .who-am-i {
         font-size: 175px;
-        width: 1400px;
+        width: 1500px;
     }
 
     .nav-list li {
@@ -1568,9 +1739,7 @@ button, input, textarea {
         top: 0;
     }
 
-    .border:hover .content-in p {
-        width: 380px;
-    }
+
     .border {
         height: 550px;
         width: 1900px;
@@ -1646,7 +1815,7 @@ button, input, textarea {
         border-radius: 800px;
     }
     .ball-text {
-        font-size: 160px;
+        font-size: 135px;
     }
     .ball-hover:hover {
         height: 1200px;
@@ -1666,18 +1835,21 @@ button, input, textarea {
         height: 110%;
     }
     .contact-info {
-        width: 700px;
+        width: 900px;
         height: 70%;
     }
+
     .input, .input_active {
         width: 1000px;
         height: 110px;
         border-radius: 80px;
+        font-size: 50px;
     }
     .textarea {
         width: 1000px;
         height: 400px;
         border-radius: 50px;
+        font-size: 50px;
     }
     .contact-title {
         font-size: 130px;
@@ -1686,8 +1858,8 @@ button, input, textarea {
         border-radius: 20px;
     }
     .contact-button {
-        width: 300px;
-        height: 100px;
+        width: 350px;
+        height: 120px;
         font-size: 55px;
     }
     .contact-border {
@@ -1707,9 +1879,11 @@ button, input, textarea {
 
     .input {
         padding: 0 60px;
+        border: 5px solid #828282;
     }
     .textarea {
         padding: 30px 60px;
+        border: 5px solid #828282;
     }
     .input-name {
         font-size: 40px;
@@ -1719,6 +1893,67 @@ button, input, textarea {
     .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
         font-size: 30px;
         transform: translateY(-80px);
+    }
+
+    .textarea:hover, .input:hover {
+        border: 5px solid #fff;
+    }
+    .entrance_active:hover {
+        border: 5px solid #fff;
+    }
+    .textarea:focus, .input:focus, .entrance_active {
+        border: 5px solid #fff;
+        font-size: 50px;
+    }
+
+
+
+    .contact-arrow-shell {
+        height: 200px;
+    }
+    .contact-arrow {
+        width: 90px;
+    }
+    
+    .arrow-line {
+        height: 95px;
+        width: 10px;
+        border-radius: 200px;
+    }
+
+
+    .contact-links-shell {
+        height: 280px;
+    }
+    .contact-links {
+        width: 300px;
+    }
+    .c-link {
+        height: 120px;
+        width: 120px;
+        border: 4px solid #111111;
+    }
+    .c-link img {
+        height: 70px;
+        width: 70px;
+    }
+    .linkedin-link img {
+        height: 55px;
+        width: 55px;
+    }
+
+
+    .final-photo {
+        height: 70%;
+        width: 85%;
+    }
+    
+    .text-info {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contact-info h4 {
+        font-size: 105px;
     }
 }
 
@@ -1807,20 +2042,20 @@ button, input, textarea {
         border-radius: 25px;
     }
 
-    .en-language {
+    .first-language {
         font-size: 50px;
     }
     .language-line {
         height: 50px;
         width: 2px;
     }
-    .ua-language {
+    .second-language {
         font-size: 35px;
     }
     .language-change:hover .language-line {
         height: 45px;
     }
-    .language-change:hover .ua-language {
+    .language-change:hover .second-language {
         transform: scale3d(1.5, 1.5, 1.5) translateX(-2px);
     }
 
@@ -1832,7 +2067,7 @@ button, input, textarea {
     }
     .who-am-i {
         font-size: 123px;
-        width: 950px;
+        width: 1050px;
     }
 
     .nav-list li {
@@ -1846,11 +2081,7 @@ button, input, textarea {
         border-radius: 25px;
     }
     .home-button:hover {
-        border: 7px solid #5C9BC1;
         font-size: 48px;
-    }
-    .home-button:active {
-        border: 7px solid #365D74;
     }
 
 
@@ -1963,9 +2194,6 @@ button, input, textarea {
         top: 0px;
     }
 
-    .border:hover .content-in p {
-        width: 380px;
-    }
     .border {
         height: 400px;
         width: 1400px;
@@ -1995,6 +2223,10 @@ button, input, textarea {
     }
     .content-in p {
         line-height: 30px;
+        width: 400px;
+    }
+    .border:hover .content-in p {
+        width: 400px;
     }
 
     .view-more {
@@ -2033,7 +2265,7 @@ button, input, textarea {
         width: 700px;
     }
     .ball-text {
-        font-size: 100px;
+        font-size: 95px;
     }
     .ball-hover:hover {
         height: 800px;
@@ -2042,7 +2274,7 @@ button, input, textarea {
     .ball_active {
         height: 300%;
         width: 300%;
-        border-radius: 50px;
+        border-radius: 1000px;
     }
     .ball-text_active {
         font-size: 0;
@@ -2090,9 +2322,11 @@ button, input, textarea {
 
     .input {
         padding: 0 40px;
+        border: 4px solid #828282;
     }
     .textarea {
         padding: 30px 40px;
+        border: 4px solid #828282;
     }
     .input-name {
         font-size: 28px;
@@ -2102,6 +2336,71 @@ button, input, textarea {
     .textarea-shell:focus-within .input-name, .input-shell:focus-within .input-name, .input-uptext_active {
         font-size: 25px;
         transform: translateY(-60px);
+    }
+
+
+
+
+    .textarea:hover, .input:hover {
+        border: 4px solid #fff;
+    }
+    .entrance_active:hover {
+        border: 4px solid #fff;
+    }
+    .textarea:focus, .input:focus, .entrance_active {
+        border: 4px solid #fff;
+        font-size: 34px;
+    }
+
+
+
+
+    .contact-arrow-shell {
+        height: 150px;
+    }
+    .contact-arrow {
+        width: 62px;
+    }
+    
+    .arrow-line {
+        height: 65px;
+        width: 6px;
+        border-radius: 100px;
+    }
+
+
+    .contact-links-shell {
+        height: 220px;
+    }
+    .contact-links {
+        width: 220px;
+    }
+    .c-link {
+        height: 90px;
+        width: 90px;
+        border: 3px solid #111111;
+    }
+    .c-link img {
+        height: 50px;
+        width: 50px;
+    }
+    .linkedin-link img {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    .final-photo {
+        height: 70%;
+        width: 90%;
+    }
+    
+    .text-info {
+        margin-bottom: 40px;
+        width: 75%;
+    }
+    .contact-info h4 {
+        font-size: 75px;
     }
 }
 
@@ -2169,27 +2468,23 @@ button, input, textarea {
         width: 140px;
     }
     .hello {
-        font-size: 84px;
+        font-size: 94px;
         letter-spacing: 0px;
     }
     .who-am-i {
-        font-size: 87px;
+        font-size: 97px;
         letter-spacing: 0px;
+        width: 850px;
     }
     .home-button {
         height: 80px;
         width: 265px;
         font-size: 42px;
-        border: 3px solid #5C9BC1;
         line-height: 20px;
     }
     .home-button:hover {
-        border: 7px solid #5C9BC1;
         font-size: 40px;
         line-height: 20px;
-    }
-    .home-button:active {
-        border: 7px solid #365D74;
     }
 
 
@@ -2227,7 +2522,7 @@ button, input, textarea {
         width: 800px;
     }
 
-
+    
 
     .projects-page {
         margin-top: 8%;
@@ -2256,7 +2551,10 @@ button, input, textarea {
         font-size: 50px;
     }
     .content-in p {
-        width: 400px;
+        width: 380px;
+    }
+    .border:hover .content-in p {
+        width: 380px;
     }
 
 
@@ -2391,8 +2689,11 @@ button, input, textarea {
         height: 210px;
     }
 
+    .content-in p {
+        width: 370px;
+    }
     .border:hover .content-in p {
-        width: 355px;
+        width: 370px;
     }
     .border:hover .projects-line {
         height: 200px;
@@ -2451,10 +2752,10 @@ button, input, textarea {
         font-size: 33px;
     } */
     .home-button:hover {
-        border: 1px solid #5C9BC1;
+        border: 1px solid #4691E7;
     }
     .home-button:active {
-        border: 1px solid #365D74;
+        border: 1px solid #1d3e64;
     }
     /* ===========/first-page=========== */
 
@@ -2469,7 +2770,7 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 6% 180px 6%;
-        height: 970px;
+        height: 1040px;
     }
     .about-me-main {
         justify-content: center;
@@ -2491,6 +2792,7 @@ button, input, textarea {
     }
 
     .chart {
+        border-radius: 60px;
         width: 75%;
         max-width: 1000px;
         background-color: inherit;
@@ -2515,8 +2817,9 @@ button, input, textarea {
         height: 650px;
     }
     .skill {
-        height: 300px;
-        width: 240px;
+        padding: 10px 0 0 0 ;
+        height: 320px;
+        width: 250px;
     }
     /* ===========/second-page=========== */
 
@@ -2543,7 +2846,7 @@ button, input, textarea {
         /* box-shadow: 0 0 50px 0 rgb(0 0 0 / 20%); */
     }
     .border:hover {
-        border: 1px solid #9CB089;
+        border: 1px solid #816ED5;
     }
 
     .project-foto {
@@ -2590,7 +2893,7 @@ button, input, textarea {
         width: 450px;
     }
     .ball-text {
-        font-size: 70px;
+        font-size: 60px;
     }
     .ball-hover:hover {
         height: 500px;
@@ -2637,13 +2940,13 @@ button, input, textarea {
     .language-change {
         width: 80px;
     }
-    .en-language {
+    .first-language {
         font-size: 25px;
     }
     .language-line {
         height: 25px;
     }
-    .ua-language {
+    .second-language {
         font-size: 15px;
     }
 
@@ -2669,6 +2972,10 @@ button, input, textarea {
         display: none;
     }
 
+
+    .main-text {
+        max-width: 100vw;
+    }
     .text {
         display: flex;
         flex-direction: column;
@@ -2677,7 +2984,7 @@ button, input, textarea {
 
     .greetings {
         text-align: center;
-        width: 95vw;
+        width: 100vw;
     }
     .hello {
         font-size: 58px;
@@ -2711,12 +3018,13 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 0 180px 0;
-        height: 930px;
+        height: 1040px;
     }
 
     .chart {
         width: 85%;
         margin-top: 90px;
+        
     }
     .chart-title-li {
         display: flex;
@@ -2803,7 +3111,7 @@ button, input, textarea {
         width: 370px;
     }
     .ball-text {
-        font-size: 55px;
+        font-size: 50px;
     }
     .ball-hover:hover {
         height: 410px;
@@ -2842,6 +3150,44 @@ button, input, textarea {
 
     .input-shell {
         margin: 5% 0 10% 0;
+    }
+
+
+
+
+    .contact-arrow-shell {
+        height: 110px;
+    }
+    .contact-arrow {
+        width: 43px;
+    }
+    
+    .arrow-line {
+        height: 45px;
+        width: 5px;
+    }
+
+
+    .contact-links-shell {
+        height: 110px;
+    }
+    .contact-links {
+        width: 140px;
+    }
+    .c-link {
+        border-radius: 100px;
+        height: 55px;
+        width: 55px;
+        border: 2px solid #111111;
+    }
+
+    .c-link img {
+        height: 35px;
+        width: 35px;
+    }
+    .linkedin-link img {
+        height: 25px;
+        width: 25px;
     }
 }
 
@@ -2886,13 +3232,13 @@ button, input, textarea {
     .language-change {
         width: 60px;
     }
-    .en-language {
+    .first-language {
         font-size: 20px;
     }
     .language-line {
         height: 20px;
     }
-    .ua-language {
+    .second-language {
         font-size: 12px;
     }
     
@@ -2968,7 +3314,7 @@ button, input, textarea {
     /* ===========second-page=========== */
     .about-me-page {
         padding: 3% 0 80px 0;
-        height: 930px;
+        height: 1070px;
     }
 
     .what-can-i-do {
@@ -2977,6 +3323,7 @@ button, input, textarea {
     .chart {
         margin-top: 70px;
         width: 90%;
+        border-radius: 45px;
     }
     .chart-title-li {
         display: flex;
@@ -2993,12 +3340,13 @@ button, input, textarea {
 
 
     .skills-page {
-        height: 940px;
+        height: 900px;
     }
     .skill-top h2 {
         font-size: 24px;
     }
     .skill {
+        padding: 20px 0 0 0;
         height: 260px;
         width: 210px;
         margin-top: 30px;
@@ -3007,7 +3355,7 @@ button, input, textarea {
         margin: 20px 0 0 0;
     }
     .skill-bottom {
-        padding: 5px 40px 0 40px;
+        padding: 5px 30px 0 30px;
     }
     .skill-logo {
         margin-bottom: 10px;
@@ -3054,7 +3402,7 @@ button, input, textarea {
     }
     .download-button {
         height: 55px;
-        width: 190px;
+        width: 200px;
         font-size: 23px;
     }
 
@@ -3069,7 +3417,7 @@ button, input, textarea {
         width: 280px;
     }
     .ball-text {
-        font-size: 45px;
+        font-size: 40px;
     }
     .ball-hover:hover {
         height: 300px;
@@ -3123,6 +3471,17 @@ button, input, textarea {
 }
 
 
+
+@media (max-width: 340px) {
+    .about-me-page {
+        height: 1120px;
+    }
+}
+@media (max-width: 310px) {
+    .about-me-page {
+        height: 1200px;
+    }
+}
 
 
 

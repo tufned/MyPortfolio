@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title>Portfolio</title>
+    <title class="core-title">Denis Funderat</title>
 </head>
 
 <body>
@@ -26,34 +27,26 @@
     <section id="home" class="home">
         <header class="header">
             <div class="home-title-container">
-                <a href="">
                 <div class="language-change">
 
                     <div class="language-animation-shell">
                         <div class="language-animation"></div>
                     </div>
                     
-
-                    <div class="en-language">
-                        EN
-                    </div>
+                    <div class="first-language">EN</div>
                     
                     <div class="language-line"></div>
 
-                    <div class="ua-language">
-                        UA
-                    </div>
-
+                    <div class="second-language">UA</div>
 
                 </div>
-                </a>
             </div>
             
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#projects"> <div class="outline">Projects</div> </a></li>
+                    <li><a href="#projects"> <div class="outline nav_projects">Projects</div> </a></li>
                     <li><a href="#download"> <div class="outline">Git Hub</div> </a></li>
-                    <li><a href="#final-page"> <div class="outline">Contact Me</div> </a></li>
+                    <li><a href="#final-page"> <div class="outline nav_contact-me">Contact Me</div> </a></li>
                 </ul>
             </nav>
         </header>
@@ -91,14 +84,29 @@
         <div class="about-me-main">
             <div class="description">
                 <h1 class="about-me_h1-title" data="suitable">  About Me </h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus rem porro quisquam ducimus! Libero hic consequatur minima maiores temporibus laboriosam, fuga quos, vero tempore sed blanditiis odio quo quibusdam et?</p>
+                <p class="main-description">I am a Front-end developer. Can make convenient adaptive sites. To do this I use the latest versions of HTML, CSS and JavaScript. I specialize in developing that part of the site which the user interacts with. Nevertheless I also know a little about the server segment. I am single-minded, responsible, and able to meet deadlines. I can speak Ukrainian, Russian and English.</p>
 
                 <ul class="ul-description">
-                    <li><b><span>Name:</span></b> Denis Funderat</li>
-                    <li><b><span>Email:</span></b> funderatdenis@gmail.com</li>
-                    <li><b><span>Phone:</span></b> +380986425812</li>
-                    <li><b><span>Address:</span></b> 65122 Odesa, Ukraine</li>
-                    <li><b><span>Date of Birth:</span></b> 28.09.2004</li>
+                    <li>
+                        <b><span class="ul-name">Name:</span></b> 
+                        <span class="ul-name-param">Denis Funderat</span>
+                    </li>
+                    <li>
+                        <b><span class="ul-mail">Email:</span></b> 
+                        <span> funderatdenis@gmail.com </span>
+                    </li>
+                    <li>
+                        <b><span class="ul-phone">Phone:</span></b> 
+                        <span> +380986425812 </span>
+                    </li>
+                    <li>
+                        <b><span class="ul-address">Address:</span></b> 
+                        <span class="ul-address-param"> Ukraine, Odesa 65122 </span>
+                    </li>
+                    <li>
+                        <b><span class="ul-birthday">Date of Birth:</span></b> 
+                        <span> 28.09.2004 </span>
+                    </li>
                 </ul>
             </div>
 
@@ -107,37 +115,37 @@
                     <li class="chart-title-li"><h3 class="chart-title">What can I do?</h3></li>
                     <li class="chart-row write-code">
                         <div> 
-                            <p data="exception">write a clean code</p> 
+                            <p data="exception" class="write-code_info">write a clean code</p> 
                             <p data="exception">90%</p>
                         </div>
                     </li>
                     <li class="chart-row rubik">
                         <div> 
-                            <p data="exception"> solve a Rubik's cube </p> 
+                            <p data="exception" class="rubik_info"> solve a Rubik's cube </p> 
                             <p data="exception"> 89% </p> 
                         </div>
                     </li>
                     <li class="chart-row talk">
                         <div>
-                            <p data="exception">communicate with people</p>
+                            <p data="exception" class="talk_info">communicate with people</p>
                             <p data="exception"> 96% </p> 
                         </div>
                     </li>
                     <li class="chart-row design">
                         <div>
-                            <p data="exception">UI/UX Design</p>
+                            <p data="exception" class="design_info">UI/UX Design</p>
                             <p data="exception"> 67% </p> 
                         </div>
                     </li>
                     <li class="chart-row cofe">
                         <div>
-                            <p data="exception">drink a cofe</p>
+                            <p data="exception" class="cofe_info">drink a cofe</p>
                             <p data="exception"> 100% </p> 
                         </div>
                     </li>
                     <li class="chart-row web-site">
                         <div>
-                            <p data="exception">make a comfy site</p>
+                            <p data="exception" class="web-site_info">make a convenient site</p>
                             <p data="exception"> 85% </p> 
                         </div>
                     </li>
@@ -149,11 +157,21 @@
     <section class="photo-block">
         <div class="photo-block-main-shell">
             <div class="photo-block-main">
-                <div class="photo photo-1"></div>
-                <div class="photo photo-2"></div>
-                <div class="photo photo-3"></div>
-                <div class="photo photo-4"></div>
-                <div class="photo photo-5"></div>
+                <div class="photo photo-1">
+                    <img src="images/steams.JPG" alt="">
+                </div>
+                <div class="photo photo-2">
+                    <img src="images/doom.jpeg" alt="">
+                </div>
+                <div class="photo photo-3">
+                    <img src="images/cubes.JPG" alt="">
+                </div>
+                <div class="photo photo-4">
+                    <img src="images/code.png" alt="">
+                </div>
+                <div class="photo photo-5">
+                    <img src="images/code-2.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -181,7 +199,7 @@
 
                         <div class="skill-bottom">
                             <div class="skill-line"></div>
-                            <p class="skill-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
+                            <p class="skill-text js-skill-text">Manipulation with DOM, array methods, AJAX, API requests, different events...</p>
                         </div>
 
                     </div>
@@ -202,7 +220,7 @@
 
                         <div class="skill-bottom">
                             <div class="skill-line"></div>
-                            <p class="skill-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
+                            <p class="skill-text html-skill-text">Flexbox, Grid, Adaptive layout, Semantics, Gulp...</p>    
                         </div>
 
                     </div>
@@ -239,7 +257,7 @@
                                     <div class="content">
                                         <div class="content-in">
                                             <h3>Project Name</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
+                                            <p class="first-project_main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +279,7 @@
                                     <div class="content">
                                         <div class="content-in">
                                             <h3>Project Name</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
+                                            <p class="second-project_main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -283,7 +301,7 @@
                                     <div class="content">
                                         <div class="content-in">
                                             <h3>Project Name</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
+                                            <p class="third-project_main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -311,7 +329,7 @@
 
         <div class="download-main">
             <div class="download-title">
-                <h1 data="suitable">You can see this CV on Git</h1>
+                <h1 data="suitable">You can look at this CV on Git</h1>
             </div> 
 
             <div class="download-line"></div>
@@ -335,11 +353,26 @@
         
         <div class="final-page-shell" id="final-page">
             <div class="final-main">
+
+                <div class="contact-arrow-shell">
+                    <div class="contact-arrow">
+                        <div class="left-line arrow-line"></div>
+                        <div class="right-line arrow-line"></div>
+                    </div>
+                </div>
+
                 <div class="ball">
                     <h1 class="ball-text">Click to <br> Contact!</h1>
                 </div>
+
                 <div class="contact-page">
-                    <div class="contact-info"></div>
+                    <div class="contact-info">
+                        <div class="final-photo"></div>
+                        <div class="text-info">
+                            <h4 class="t-i-1">Let's</h4>
+                            <h4 class="t-i-2">Cooperate!</h4>
+                        </div>
+                    </div>
 
                     <div class="contact-border">
                         <div class="contact-header">
@@ -350,17 +383,17 @@
                             <div class="form">
 
                                 <div class="input-shell">
-                                    <div class="input-name">Name</div>
+                                    <div class="input-name input-initials">Name</div>
                                     <input type="text" class="input initials-input entrance">
                                 </div>
 
                                 <div class="input-shell">
-                                    <div class="input-name">Email</div>
+                                    <div class="input-name input-email">Email</div>
                                     <input type="text" class="input email-input entrance">
                                 </div>
 
                                 <div class="textarea-shell">
-                                    <div class="input-name">Massage</div>
+                                    <div class="input-name input-massage">Massage</div>
                                     <textarea class="textarea entrance"></textarea>
                                 </div>
 
@@ -379,6 +412,22 @@
 
                     </div>
                 </div>
+
+                <div class="contact-links-shell">
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/dentheman/" target="_blank">
+                            <div class="linkedin-link c-link">
+                                <img src="icons/linkedIn-black.png" alt="">
+                            </div>
+                        </a>
+                        <a href="https://github.com/tufned" target="_blank">
+                            <div class="git-link c-link">
+                                <img src="icons/GitHub-Mark-120px-plus.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -388,6 +437,7 @@
 
 
 
+    <script src="js/languagesSetup.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
