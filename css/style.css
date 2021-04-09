@@ -3289,8 +3289,8 @@ button, input, textarea {
     }
 
     .home-button {
-        height: 53px;
-        width: 170px;
+        height: 60px;
+        width: 200px;
         font-size: 25px;
     }
     .home-button:hover {
@@ -3401,8 +3401,8 @@ button, input, textarea {
         margin: 25% 0 3%;
     }
     .download-button {
-        height: 55px;
-        width: 200px;
+        height: 60px;
+        width: 220px;
         font-size: 23px;
     }
 
