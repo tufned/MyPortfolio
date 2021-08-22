@@ -49,8 +49,8 @@ const languageArr = {
         "ua": "Про Мене"
     },
     "main-description": {
-        "en": "I am a Front-end developer. Can make convenient adaptive sites. To do this I use the latest versions of HTML, CSS and JavaScript. I specialize in developing that part of the site which the user interacts with. Nevertheless I also know a little about the server segment. I am single-minded, responsible, and able to meet deadlines. I can speak Ukrainian, Russian and English.",
-        "ua": "Я Front-end розробник. Вмію робити зручні адаптивні сайти. Для цього використовую новітні версії HTML, CSS та JavaScript. Спеціалізуюся на розробці тої частини сайту, з якою взаємодіє користувач. Проте також трохи знаюся і на серверному сегменті. Я цілеспрямований, відповідальний та дотримуюся встановлених термінів. Володію українською, російською та англійською мовами. "
+        "en": "I am a Front-end developer. Can make convenient adaptive sites. To do this I use the latest versions of HTML, CSS and JavaScript. I specialize in developing that part of the site which the user interacts with. Nevertheless I also know a little about the server segment. I am single-minded, responsible, and able to meet deadlines. I can speak Ukrainian, Russian and English. Nowadays I study at Igor Sikorsky Kyiv Polytechnic Institute.",
+        "ua": "Я Front-end розробник. Вмію робити зручні адаптивні сайти. Для цього використовую новітні версії HTML, CSS та JavaScript. Спеціалізуюся на розробці тої частини сайту, з якою взаємодіє користувач. Проте також трохи знаюся і на серверному сегменті. Я цілеспрямований, відповідальний та дотримуюся встановлених термінів. Володію українською, російською та англійською мовами. Наразі вчуся в КПІ ім. Сікорського."
     },
 
     // ul-description
@@ -71,12 +71,12 @@ const languageArr = {
         "ua": "Телефон:"
     },
     "ul-address": {
-        "en": "Address:",
-        "ua": "Адреса:"
+        "en": "Place of Residence:",
+        "ua": "Місце Проживання:"
     },
     "ul-address-param": {
-        "en": "Ukraine, Odesa 65122",
-        "ua": "Україна, Одеса 65122"
+        "en": "Ukraine, Kyiv",
+        "ua": "Україна, Київ"
     },
     "ul-birthday": {
         "en": "Date of Birth:",
@@ -137,16 +137,16 @@ const languageArr = {
         "ua": "Проекти"
     },
     "first-project_main-text": {
-        "en": "EN Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.",
-        "ua": "UA Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum sapiente ratione."
+        "en": "This is the catalogue site with games. It has a cart, a search bar, products filters, slider and many more.",
+        "ua": "Це сайт-каталог з іграми. У ньому є кошик, можливість пошуку ігор, фільтри продуктів, слайдер та багато іншого."
     },
     "second-project_main-text": {
-        "en": "EN Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.",
-        "ua": "UA Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum sapiente ratione."
+        "en": "This is the standart 2048. There is also a 3x3 game mode. You can navigate to it from the menu.",
+        "ua": "Це стандарта гра 2048. В моїй версії також присутній режим гри 3х3. Можна перейти до нього з меню."
     },
     "third-project_main-text": {
-        "en": "EN Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum ab sapiente ratione.",
-        "ua": "UA Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eligendi asperiores voluptates laborum sapiente ratione."
+        "en": "In this project you can find out the temperature, humidity and other options of the most major cities of Ukraine.",
+        "ua": "У цьому проекті ви можете дізнатися температуру, вологість та інші параметри найбільших міст України."
     },
     "view-more": {
         "en": "View all Projects",
@@ -169,7 +169,7 @@ const languageArr = {
 
     // final page
     "ball-text": {
-        "en": "Click to Contact!",
+        "en": "Click to <br> Contact!",
         "ua": "Натисніть <br> для <br> Зв'язку!"
     },
     "t-i-1": {
