@@ -1,4 +1,4 @@
-# 2048: The Game
+# Curriculum Vitae
 
 This is my **`CV`**! It has all needed information about me and my work. And all that info translated into two languages: English and Ukrainian. So you can easily switch between them and your browser will memorized the choice.
 
